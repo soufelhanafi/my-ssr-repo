@@ -1,0 +1,48 @@
+<div *ngIf="dataFromDesktop?.about?.displayCalendar || isMobile" class="calendar-mobile-container">
+  <div *ngIf="isMobile" class="header">
+    <div class="title">{{ title }}</div>
+    <button (click)="closeDialog()" mat-icon-button class="close-icon">
+      <mat-icon matSuffix color="black" inline="false">close</mat-icon>
+    </button>
+  </div>
+  <div class="calendar-wrapper">
+    <div class="calendar-title">CALENDAR</div>
+    <mat-calendar
+      #calendar
+      [dateFilter]="datefilter"
+      [(selected)]="selectedDate"
+      [minDate]="today"
+      (swipeLeft)="nextMonth()"
+      (swipeRight)="previousMonth()"
+      [dateClass]="dateClass"
+      (selectedChange)="onSelectedDate($event)"
+    >
+    </mat-calendar>
+    <!-- <button (swipeLeft)="previousMonth()">Luna cealalanta</button>
+
+        <button (swipeRight)="nextMonth()">Luna cealalanta</button> -->
+    <div class="calendar-footer">
+      <div class="day">
+        <div class="day-color-1"></div><span class="day-label">Zile trecute</span>
+      </div>
+      <div class="day">
+        <div class="day-color-2"></div><span class="day-label">Zile Libere</span>
+      </div>
+      <div class="day">
+        <div class="day-color-3"></div><span class="day-label">Zile Ocupate</span>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isMobile" class="calendar-bottom">
+    <div *ngIf="!selectedDate" class="calendar-bottom-label-not-selected"
+      >Selecteaza o data libera</div
+    >
+    <div *ngIf="selectedDate" class="calendar-bottom-label-selected">
+      <div class="selected-date-label">Data selectata:</div>
+      <div class="selected-date">{{ selectedDate | date }}</div>
+    </div>
+    <button [disabled]="!selectedDate" (click)="sendDate()" class="calendar-bottom-button"
+      >Trimite mesaj</button
+    >
+  </div>
+</div>

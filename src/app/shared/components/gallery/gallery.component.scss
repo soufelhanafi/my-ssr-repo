@@ -1,0 +1,36 @@
+@import "/src/sass/variables";
+
+:host {
+  display: block;
+}
+
+.gallery {
+  column-count: 3;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+  float: left;
+}
+
+figure {
+  margin: 0;
+  position: relative;
+}
+
+img,
+iframe {
+  width: 100%;
+  border-radius: 16px;
+}
+
+iframe {
+  height: 50vh;
+}
+
+@media screen and (max-width: 480px) {
+  .gallery {
+    column-count: 2;
+  }
+}

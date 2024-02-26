@@ -1,0 +1,79 @@
+.mat-mdc-dialog-container {
+  padding: 0 !important;
+}
+
+.cookies-pref-wrapper {
+  max-width: 680px;
+  // padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .cookies-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 30px;
+
+    .back-arrow {
+      cursor: pointer;
+    }
+
+    .cookies-pref-title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 30px;
+    }
+  }
+
+  .cookies-pref-description {
+    padding: 32px 0;
+    width: 60%;
+  }
+
+  .cookies-pref-form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+
+    .form-title {
+      margin: auto;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 30px;
+    }
+
+    .input-container {
+      width: 100%;
+      padding: 18px 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.5px solid rgba(84, 84, 88, 0.6);
+      color: var(--black, #000);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 17px;
+
+      &:last-child {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  .save-button {
+    margin-top: 32px;
+    padding: 8px;
+    width: 320px;
+    border: unset;
+    background-color: #d94a8c;
+    color: white;
+    border-radius: 32px;
+  }
+}
+
+.divider {
+  width: 100%;
+  border-bottom: 1px solid #54545851;
+}

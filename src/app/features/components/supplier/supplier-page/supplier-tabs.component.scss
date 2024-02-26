@@ -1,0 +1,124 @@
+@import "src/sass/variables";
+
+::ng-deep {
+  .mat-mdc-tab-ripple {
+    visibility: hidden !important;
+  }
+
+  .mat-mdc-tab-header-pagination {
+    display: none !important;
+  }
+
+  .mat-mdc-tab-header {
+    overflow-x: scroll !important;
+  }
+
+  .mat-mdc-tab-label-container {
+    overflow: visible !important;
+  }
+
+  .mat-mdc-tab-header::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-view-container {
+    .mat-mdc-tab-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-self: stretch;
+      margin-bottom: 24px;
+
+      .mat-mdc-tab-labels {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .mdc-tab {
+        padding-left: 0px;
+        padding-right: 0px;
+
+        .mdc_tab__content .mdc-tab__text-label {
+          color: $calendar-gray-text;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .desktop-view-container {
+    .mat-mdc-tab-header {
+      display: flex;
+      margin: 32px 0 32px 0;
+      padding: 16px 32px;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-self: stretch;
+      border-radius: 16px;
+
+      .mat-mdc-tab-labels {
+        display: flex;
+        justify-content: space-between !important;
+      }
+
+      .mdc_tab__content .mdc-tab__text-label {
+        color: $button-tab-purple;
+        font-family: "SF Pro Display";
+      }
+    }
+
+    .mdc-tab {
+      padding: 8px;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        .mdc-tab__text-label {
+          background: $supplier-gradient;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .mdc-tab-indicator {
+          display: flex;
+          padding: 8px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border-radius: 100px;
+          border: 1px solid $button-border-red;
+          background: transparent;
+        }
+      }
+    }
+
+    .mdc-tab--active {
+      &:focus {
+        .mdc-tab__text-label {
+          color: $white !important;
+        }
+      }
+
+      .mdc-tab__text-label {
+        color: $white !important;
+        font-weight: 500;
+      }
+
+      .mdc-tab-indicator {
+        display: flex;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 100px;
+        background: $supplier-gradient;
+
+        .mdc-tab-indicator__content--underline {
+          display: none;
+        }
+      }
+    }
+  }
+}

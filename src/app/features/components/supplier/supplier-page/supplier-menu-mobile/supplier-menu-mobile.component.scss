@@ -1,0 +1,29 @@
+@import "src/sass/variables";
+@import "src/sass/_mixins";
+
+:host {
+  display: block;
+}
+
+.event-menu-mobile,
+.menu-mobile-active-figure {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+
+  button {
+    width: 50%;
+  }
+}
+
+.menu-mobile-active-figure {
+  visibility: visible !important;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+  padding-left: 16px;
+  padding-right: 16px;
+}

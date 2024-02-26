@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "title": "Bali",
+      "imgPath": "/assets/Bali.jpg",
+      "link": "/destinations/bali"
+    },
+    {
+      "title": "Turcia",
+      "imgPath": "/assets/Bali.jpg",
+      "link": "/destinations/bali"
+    },
+    {
+      "title": "Zanzibar",
+      "imgPath": "/assets/Bali.jpg",
+      "link": "/destinations/bali"
+    },
+    {
+      "title": "Ibiza",
+      "imgPath": "/assets/Bali.jpg",
+      "link": "/destinations/bali"
+    },
+    {
+      "title": "Thailanda",
+      "imgPath": "/assets/Bali.jpg",
+      "link": "/destinations/bali"
+    },
+    {
+      "title": "Toscana",
+      "imgPath": "/assets/Bali.jpg",
+      "link": "/destinations/bali"
+    }
+  ]
+}

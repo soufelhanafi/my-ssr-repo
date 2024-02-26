@@ -1,0 +1,27 @@
+<div class="main-box" *ngIf="googleRating">
+  <div class="google-rating-box">
+    <img src="../../../../../../../assets/icons/google_icon.svg" alt="google_icon" />
+    <p class="rating-value">{{ googleRating }}</p>
+
+    <app-supplier-rating-box
+      [ratingValue]="googleRating"
+      [starWidth]="'20px'"
+      [ratingDisplay]="false"
+    ></app-supplier-rating-box>
+  </div>
+
+  <div class="add-new-review">
+    <div class="text-box">
+      <img
+        src="../../.../../../../../../../assets/icons/ illustration_new_ratings.png"
+        alt="illustration_new_ratings"
+      />
+      <p>Scrie o recenzie</p>
+      <p class="create-account-text">
+        Creează-ți un cont și spune-ți părerea despre experiența cu {{ supplierTitle }}.
+      </p>
+    </div>
+
+    <button class="button button-purple" type="submit">Intră în cont</button>
+  </div>
+</div>

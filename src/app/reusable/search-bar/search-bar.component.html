@@ -1,0 +1,48 @@
+<div class="main">
+  <div class="search-bar boxed-width">
+    <div (click)="this.showSearchEvent.emit('')" class="search-zone">
+      <div class="icon-search">
+        <img src="../../../../assets/search-icon.svg" alt="" width="17px" height="17px" />
+      </div>
+      <mat-form-field class="search-text" subscriptSizing="dynamic">
+        <mat-label>Ce anume cauti?</mat-label>
+        <input class="input-field" matInput readonly [value]="searchQuery" />
+      </mat-form-field>
+      <!-- <input class="search-text" type="text" placeholder="Unde si cand?"> -->
+      <!-- <div class="search-text">
+              <p>Unde si cand?<p>
+              <div class="place"></div>
+              <div class="date"></div>
+          </div> -->
+    </div>
+    <div class="filter-zone" (click)="this.showFiltersEvent.emit('')">
+      <div class="icon-filter">
+        <img src="../../../../assets/filter-icon.svg" alt="" width="16px" height="16px" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <form class="search-container">
+  <div class="search-div">
+    <img class="search-img" src="../../../../assets/Home/searchIcon.svg" alt="Icon">
+    <div>
+      <input class="search-input" type="text" placeholder="Ce anume cauti?">
+    </div>
+  </div>
+</form>
+<form class="search-container">
+  <div class="search-div">
+    <img class="search-img" src="../../../../assets/Home/searchIcon.svg" alt="Icon">
+    <mat-form-field>
+      <mat-label>Ce anume cauti?</mat-label>
+      <input matInput />
+    </mat-form-field>
+  </div>
+</form>
+<form class="search-container">
+  <div class="search-div">
+    <img class="search-img" src="../../../../assets/Home/searchIcon.svg" alt="Icon">
+    <input class="search-input" type="text" placeholder="Ce anume cauti?">
+  </div>
+</form> -->

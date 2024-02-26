@@ -1,0 +1,54 @@
+<div class="search-desktop-input-wrapper">
+  <h1 class="title">Planifică nunta de vis cu aplicația Marity!</h1>
+  <app-search-bar
+    (showSearchEvent)="openSearchDialog()"
+    (showFiltersEvent)="openFilterDialog()"
+    [locationInputValue]="locationInput"
+    [dateInputValue]="dateInput"
+  ></app-search-bar>
+</div>
+<app-filter-bar
+  [supplierTypes]="supplierTypes"
+  [activeIndex]="activeSupplierTypeIndex"
+  (selectedType)="filterSupplierTypesChange($event)"
+></app-filter-bar>
+
+<!-- <div class="search-bar-wrapper">
+        <div class="search-bar-content">
+            <mat-form-field>
+                <input matInput placeholder="Locatie">
+              </mat-form-field>
+              <span class="divider"></span>
+              <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Data">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+        </div>
+    </div> -->
+
+<div class="explore-wrapper">
+  <!-- <mat-drawer class="side-filters" mode="side" [opened]="!isMobile"> -->
+  <!-- the filter dialog configured here is only displayed on desktop.
+    for mobile version, check how the Bottom Sheet is instantiated in openFilterDialog()  -->
+  <!-- <app-filter-dialog *ngIf="!isMobile" [supplierTypes]="supplierTypes"
+            [activeSupplierTypeIndex]="activeSupplierTypeIndex"></app-filter-dialog>
+    </mat-drawer> -->
+
+  <!-- <div>{{supplierList.length}}</div> -->
+
+  <ng-container *ngIf="supplierList[0]?.message !== 'Data not found'; else noResults">
+    <mat-drawer-container class="boxed-width">
+      <mat-drawer-content>
+        <app-suplier-list [supplierList]="supplierList"></app-suplier-list>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </ng-container>
+
+  <ng-template #noResults>
+    <div class="no-results-TEMP">
+      <h4>Nu s-au gasit rezultate ... </h4>
+      <img style="height: 320px" src="assets/images/Poppy-No-Results-Found.png" alt="" />
+    </div>
+  </ng-template>
+</div>

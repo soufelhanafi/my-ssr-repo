@@ -1,0 +1,294 @@
+<section class="page-container">
+  <div class="title">Planifică nunta de vis cu aplicația Marity!</div>
+
+  <app-search-bar routerLink="/explore"></app-search-bar>
+  <!-- <app-breadcrumb-navigation></app-breadcrumb-navigation> -->
+  <div class="main-title">Furnizori premium </div>
+  <!-- <app-banner-single class="main-section boxed-width" [banner]='{
+        title: "Planifica-ti <br> nunta de vis cu Marity",
+        cta: {
+            text: "Incepe acum",
+            link: "/"
+        },
+        backgroundCssClass: "planMarity",
+        isSmall: false
+    }'>
+    </app-banner-single> -->
+
+  <section>
+    <div *ngIf="prestigeBallRooms.length" class="supplier-section">
+      <div class="supplier-section-header">
+        <div class="all-supplier">Locatii</div>
+        <div class="see-all-wrap" routerLink="/explore">
+          <div class="see-all-label">Vezi toata lista</div>
+          <img class="arrow-right" src="/assets/images/icons/arrow_right.svg" alt="" />
+        </div>
+      </div>
+      <div class="carousel-container-custom">
+        <app-supplier
+          (click)="goToSupplier(supplier)"
+          class="app-supplier"
+          *ngFor="let supplier of prestigeBallRooms.slice(0, 4)"
+          [supplierDetails]="supplier"
+        ></app-supplier>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div *ngIf="prestigePhotografers.length" class="supplier-section">
+      <div class="supplier-section-header">
+        <div class="all-supplier">Foto</div>
+        <div class="see-all-wrap" routerLink="/explore">
+          <div class="see-all-label">Vezi toata lista</div>
+          <img class="arrow-right" src="/assets/images/icons/arrow_right.svg" alt="" />
+        </div>
+      </div>
+      <div class="carousel-container-custom">
+        <app-supplier
+          (click)="goToSupplier(supplier)"
+          class="app-supplier"
+          *ngFor="let supplier of prestigePhotografers.slice(0, 4)"
+          [supplierDetails]="supplier"
+        ></app-supplier>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div *ngIf="prestigeMusicBands.length" class="supplier-section">
+      <div class="supplier-section-header">
+        <div class="all-supplier">Formatii</div>
+        <div class="see-all-wrap" routerLink="/explore">
+          <div class="see-all-label">Vezi toata lista</div>
+          <img class="arrow-right" src="/assets/images/icons/arrow_right.svg" alt="" />
+        </div>
+      </div>
+      <div class="carousel-container-custom">
+        <app-supplier
+          (click)="goToSupplier(supplier)"
+          class="app-supplier"
+          *ngFor="let supplier of prestigeMusicBands.slice(0, 4)"
+          [supplierDetails]="supplier"
+        ></app-supplier>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div *ngIf="prestigeOtherServices.length" class="supplier-section">
+      <div class="supplier-section-header">
+        <div class="all-supplier">Alti furnizori</div>
+        <div class="see-all-wrap" routerLink="/explore">
+          <div class="see-all-label">Vezi toata lista</div>
+          <img class="arrow-right" src="/assets/images/icons/arrow_right.svg" alt="" />
+        </div>
+      </div>
+      <div class="carousel-container-custom">
+        <app-supplier
+          (click)="goToSupplier(supplier)"
+          class="app-supplier"
+          *ngFor="let supplier of prestigeOtherServices.slice(0, 4)"
+          [supplierDetails]="supplier"
+        ></app-supplier>
+      </div>
+    </div>
+  </section>
+
+  <div class="trebuie-PASRAT">
+    <!-- <section class="main-section boxed-width">
+            <h2 class="heading-2">Iata primii pasi pe care trebuie sa ii faci</h2>
+            <div class="carousel-container">
+                <div class="step-card" *ngFor="let step of steps;">
+                    <div class="step-card__icon-container">
+                        <img [src]="step.imgPath" width="64" height="64" />
+                    </div>
+                    <div class="step-card__text-container heading-4">
+                        {{ step.title }}
+                    </div>
+                </div>
+            </div>
+            <section>
+                De Sters
+                <button (click)="setCookie()">Set Coockie</button>
+            </section>
+        </section> -->
+
+    <!-- 
+        <section class="main-section boxed-width">
+            <h2 class="heading-2">Alege unul din localurile premium pentru o experienta cat mai placuta</h2>
+            <div class="carousel-container">
+                <app-supplier *ngFor="let supplier of prestigeBallRooms;" [supplierDetails]="supplier"></app-supplier>
+            </div>
+            <a routerLink="/explore" class="main-btn"> Vezi toti furnizorii </a>
+        </section>
+        <section class="main-section boxed-width">
+            <h2 class="heading-2">Alege unul din bandurile premium pentru o experienta cat mai placuta</h2>
+            <div class="carousel-container">
+                <app-supplier *ngFor="let supplier of prestigeMusicBands;" [supplierDetails]="supplier"></app-supplier>
+            </div>
+            <a routerLink="/explore" class="main-btn"> Vezi toti furnizorii </a>
+        </section>
+        <section class="main-section boxed-width">
+            <h2 class="heading-2">Alege unul din fotografii premium pentru o experienta cat mai placuta</h2>
+            <div class="carousel-container">
+                <app-supplier *ngFor="let supplier of prestigePhotografers;"
+                    [supplierDetails]="supplier"></app-supplier>
+            </div>
+            <a routerLink="/explore" class="main-btn"> Vezi toti furnizorii </a>
+        </section>
+        <section class="main-section boxed-width">
+            <h2 class="heading-2">Alege unul din restul :) premium pentru o experienta cat mai placuta</h2>
+            <div class="carousel-container">
+                <app-supplier *ngFor="let supplier of prestigeOtherServices;"
+                    [supplierDetails]="supplier"></app-supplier>
+            </div>
+            <a routerLink="/explore" class="main-btn"> Vezi toti furnizorii </a>
+        </section> -->
+
+    <!-- <section class="main-section boxed-width">
+            <h2 class="heading-2">Descopera nuntile Marity si pe cei care s-au bucurat.</h2>
+            <div class="carousel-container">
+                <app-wedding-card *ngFor="let wedding of weddings;" [weddingDetails]="wedding"></app-wedding-card>
+            </div>
+            <a routerLink="/" class="main-btn"> Vezi toate nuntile </a>
+        </section> -->
+  </div>
+
+  <!-- Descarca aplicatia section aici -->
+  <!-- 
+    <app-banner-single [banner]='{
+        title: "Cauta-ti rochia perfecta <br> in colectiile noastre",
+        cta: {
+            text: "Vezi colectii",
+            link: "/"
+        },
+        backgroundCssClass: "weddingDress",
+        isSmall: false
+    }'>
+    </app-banner-single>
+
+
+    <app-banner-single [banner]='{
+        title: "Exploreaza gama de <br> invitatii, carduri de <br> masa si plicuri",
+        cta: {
+            text: "Vezi catalog",
+            link: "/"
+        },
+        imgPath: "/../../../assets/invites.png",
+        backgroundCssClass: "invitesGradient",
+        isSmall: false
+    }'>
+    </app-banner-single> -->
+
+  <!-- 
+    <section class="main-section boxed-width">
+        <h2 class="heading-2">Tot la noi poti gasi cele mai bune oferte pentru luna de miere</h2>
+        <div class="carousel-container">
+            <app-img-card *ngFor="let destination of destinations;" [imgPath]="destination.imgPath"
+                [title]="destination.title" [link]="destination.link">
+            </app-img-card>
+        </div>
+        <a routerLink="/" class="main-btn"> Vezi toate destinatiile </a>
+    </section> -->
+
+  <!-- <section class="main-section boxed-width">
+        <h2 class="heading-2">Creaza-ti propriul site de nunta asa cum iti doresti folosind unul din templateurile
+            noastre</h2>
+        <div class="carousel-container">
+            <app-img-card *ngFor="let destination of destinations;" [imgPath]="destination.imgPath">
+            </app-img-card>
+        </div>
+        <a routerLink="/" class="main-btn"> Vezi toate templateurile </a>
+    </section> -->
+
+  <section>
+    <div class="schedule-for-mobile discover-more"></div>
+    <div class="schedule-container discover-more">
+      <div class="schedule-content">
+        <span class="text-description"
+          >Descoperă acum aplicația Marity 360 Planner și planificarea nuntii va fi mult mai ușoară
+          și mai plăcută!</span
+        >
+        <button class="button-transparent" (click)="goToLink(client360WebSite)"
+          >Afla mai multe</button
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="main-section boxed-width">
+        <h2 class="heading-2">Inspira-te din ideile noastre de nunta si afla noutati.</h2>
+        <div class="carousel-container">
+           
+        </div>
+        <a routerLink="/" class="main-btn"> Vezi toate ideile </a>
+    </section> -->
+
+  <section>
+    <div *ngIf="prestigeMusicBands.length" class="supplier-section">
+      <div class="supplier-section-header">
+        <div class="all-supplier wed">Idei de nunta</div>
+        <div class="see-all-wrap" routerLink="/explore"> </div>
+      </div>
+      <div class="carousel-container-custom" [ngStyle]="{ maxHeight: show ? null : '204px' }">
+        <a *ngFor="let banner of weddingIdeas" [routerLink]="banner.link">
+          <app-banner-single [banner]="banner"> </app-banner-single>
+        </a>
+      </div>
+      <button class="header-list-button-mobile margins" (click)="showContent()"
+        >Vezi mai multe<img class="arrow-right" src="/assets/images/icons/arrow_right.svg" alt=""
+      /></button>
+    </div>
+  </section>
+
+  <!--IDEI DE NUNTA  -->
+
+  <!-- FIX SWIPER ! Aici vine un swiper cu slide de telefoane   -->
+  <app-phones-slider></app-phones-slider>
+</section>
+<div class="title-container">
+  <img class="logo-marity-mid" src="/assets/images/marity_square_logo.svg" alt="marity_logo" />
+  <span class="marity-business-label">Marity business</span>
+
+  <div class="marity-download-buttons">
+    <img
+      src="/assets/images/download_button_app_store.svg"
+      alt=""
+      class="download-logo"
+      (click)="goToLink('https://apps.apple.com/us/app/marity-business/id1669983630')"
+    /><img
+      src="/assets/images/download_button_google_play.svg"
+      alt=""
+      class="download-logo"
+      (click)="goToLink('https://play.google.com/store/apps/details?id=cot.maritybusiness.app')"
+    />
+  </div>
+
+  <h1 class="title-main-label">Descarcă aplicația și creează-ți un cont</h1>
+
+  <button class="header-list-button-mobile" (click)="goToLink(businessWebSite)"
+    >Află mai multe <img class="arrow-right" src="/assets/images/icons/arrow_right.svg" alt=""
+  /></button>
+</div>
+
+<section>
+  <div class="schedule-for-mobile"></div>
+  <div class="schedule-container">
+    <div class="schedule-content">
+      <span class="text-description"
+        >Cu Marity Business poți să-ți listezi și să-ți promovezi serviciile într-un mod
+        eficient.</span
+      >
+      <button class="button-transparent" (click)="goToLink(businessWebSite)"
+        >Downloadeaza aplicatia</button
+      >
+    </div>
+  </div>
+</section>
+<!-- FIX SWIPER ! Aici vine un swiper cu servicii  -->
+<app-list-your-service></app-list-your-service>
+
+<app-question-answear></app-question-answear>
+<!-- <app-start-now></app-start-now> -->
+<!-- <div> <- start now </div>
+<div> search stepper -> </div>
+<app-search-stepper></app-search-stepper> -->

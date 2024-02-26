@@ -1,0 +1,15 @@
+<div class="main-box">
+  <h3>Ce spun clienții noștri</h3>
+
+  <app-new-review-box
+    [googleRating]="googleRating"
+    [supplierTitle]="supplierTitle"
+  ></app-new-review-box>
+
+  <h3>Ce spun clienții noștri pe Google</h3>
+
+  <app-google-user-review-card
+    [googleReviews]="googleReviews"
+    [isMobile]="isMobile"
+  ></app-google-user-review-card>
+</div>

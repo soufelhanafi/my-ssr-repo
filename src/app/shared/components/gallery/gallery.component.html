@@ -1,0 +1,26 @@
+<div class="gallery">
+  <div *ngFor="let figure of gallery; let index = index" class="gallery-item">
+    <ng-container
+      [ngTemplateOutlet]="figure.isVideo ? video : picture"
+      [ngTemplateOutletContext]="{ figure: figure, index: index }"
+    ></ng-container>
+  </div>
+</div>
+
+<ng-template #video let-figure="figure">
+  <figure (click)="onFigureClick(figure)">
+    <iframe
+      [src]="figure.linkSrc"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </figure>
+</ng-template>
+
+<ng-template #picture let-figure="figure" let-index="index">
+  <figure (click)="onFigureClick(figure)">
+    <img [src]="figure.linkSrc" />
+  </figure>
+</ng-template>

@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "63edf47052d65c8f4700fa7e",
+    "id": 3,
+    "nume": "Otopeni",
+    "diacritice": "Otopeni",
+    "judet": "Ilfov",
+    "auto": "IF",
+    "zip": 75100,
+    "populatie": 12540,
+    "lat": 44.56718739999999,
+    "lng": 26.0835113
+  },
+  {
+    "_id": "63edf47052d65c8f4700fa81",
+    "id": 6,
+    "nume": "Copaceni",
+    "diacritice": "Copăceni",
+    "judet": "Ilfov",
+    "auto": "IF",
+    "zip": 77006,
+    "populatie": 3131,
+    "lat": 44.2705494,
+    "lng": 26.0832726
+  },
+  {
+    "_id": "63edf47052d65c8f4700fa83",
+    "id": 8,
+    "nume": "Balotesti",
+    "diacritice": "Baloteşti",
+    "judet": "Ilfov",
+    "auto": "IF",
+    "zip": 77015,
+    "populatie": 6286,
+    "lat": 44.62244560000001,
+    "lng": 26.1102518
+  },
+  {
+    "_id": "63edf47052d65c8f4700fa87",
+    "id": 12,
+    "nume": "Bragadiru",
+    "diacritice": "Bragadiru",
+    "judet": "Ilfov",
+    "auto": "IF",
+    "zip": 77025,
+    "populatie": 15329,
+    "lat": 44.3815998,
+    "lng": 25.9956853
+  }
+]

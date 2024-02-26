@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "name": "Locatii",
+      "img": "/assets/locatii-icon.svg",
+      "isActive": false
+    },
+    {
+      "name": "Formatii",
+      "img": "/assets/formatii-icon.svg",
+      "isActive": false
+    },
+    {
+      "name": "Foto",
+      "img": "/assets/fotovide-icon.svg",
+      "isActive": false
+    },
+    {
+      "name": "Bar",
+      "img": "/assets/drinks-icon.svg",
+      "isActive": false
+    },
+    {
+      "name": "Decoratiuni",
+      "img": "/assets/flori-icon.svg",
+      "isActive": false
+    },
+    {
+      "name": "Transport",
+      "img": "/assets/transport-icon.svg",
+      "isActive": false
+    },
+    {
+      "name": "Artificii",
+      "img": "/assets/efecte-icon.svg",
+      "isActive": false
+    },
+    {
+      "name": "Entertaineri",
+      "img": "/assets/entertainer-icon.svg",
+      "isActive": false
+    }
+  ]
+}

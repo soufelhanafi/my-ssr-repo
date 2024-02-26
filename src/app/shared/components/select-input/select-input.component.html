@@ -1,0 +1,7 @@
+<mat-form-field appearance="outline" class="input-box">
+  <mat-select class="select-field" [formControl]="formControl" [placeholder]="tipEveniment">
+    <mat-option class="option-field" *ngFor="let option of optionList" [value]="option.optionValue">
+      {{ option.optionText }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

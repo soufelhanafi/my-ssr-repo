@@ -1,0 +1,418 @@
+{
+  "data": [
+    {
+      "_id": "63ef431514149e0199a6f1c6",
+      "name": "Local",
+      "img": "/assets/locatii-icon.svg",
+      "data": [
+        {
+          "title": "Tipul localului",
+          "multiSelection": false,
+          "displayDirectionX": false,
+          "displayFilterMultiSelection": true,
+          "displayFilters": true,
+          "displayType": "check",
+          "name": "TipulLocalului",
+          "data": [
+            {
+              "id": "Ballroom",
+              "type": "check",
+              "displayType": "check",
+              "label": "Ballroom",
+              "value": false
+            },
+            {
+              "id": "Restaurant",
+              "type": "check",
+              "displayType": "check",
+              "label": "Restaurant",
+              "value": false
+            },
+            {
+              "id": "Hotel",
+              "type": "check",
+              "displayType": "check",
+              "label": "Hotel/Pensiune",
+              "value": false
+            },
+            {
+              "id": "Gradina",
+              "type": "check",
+              "displayType": "check",
+              "label": "Gradina",
+              "value": false
+            },
+            {
+              "id": "LocatieInedita",
+              "type": "check",
+              "displayType": "check",
+              "label": "Locatie Inedita",
+              "value": false
+            }
+          ]
+        },
+        {
+          "title": "Capacitate",
+          "name": "Capacitate",
+          "displayDirectionX": true,
+          "displayFilters": true,
+          "displayFilterMultiSelection": false,
+          "multiSelection": true,
+          "displayType": "rondbox",
+          "data": [
+            {
+              "id": "100pers",
+              "type": "box-row",
+              "displayType": "rondbox",
+              "label": "<100 Persoane",
+              "value": false
+            },
+            {
+              "id": "200pers",
+              "type": "box-row",
+              "label": "100-200 Persoane",
+              "displayType": "rondbox",
+              "value": false
+            },
+            {
+              "id": "300pers",
+              "type": "box-row",
+              "label": "200-300 Persoane",
+              "displayType": "rondbox",
+              "value": false
+            },
+            {
+              "id": "400pers",
+              "type": "box-row",
+              "label": "300-400 Persoane",
+              "displayType": "rondbox",
+              "value": false
+            },
+            {
+              "id": "+400pers",
+              "type": "box-row",
+              "label": ">400 Persoane",
+              "displayType": "rondbox",
+              "value": false
+            }
+          ]
+        },
+        {
+          "title": "Facilitati",
+          "name": "Facilitati",
+          "multiSelection": true,
+          "displayDirectionX": false,
+          "displayFilterMultiSelection": true,
+          "displayFilters": true,
+          "displayType": "box-col",
+          "data": [
+            {
+              "id": "Parcare",
+              "label": "Parcare",
+              "value": true,
+              "type": "box-col",
+              "displayType": "box-col",
+              "icon": "parking"
+            },
+            {
+              "id": "Wifi",
+              "label": "Wifi",
+              "value": false,
+              "type": "box-col",
+              "displayType": "box-col",
+              "icon": "wifi"
+            },
+            {
+              "id": "Scena",
+              "label": "Scena muzica",
+              "value": false,
+              "type": "box-col",
+              "displayType": "box-col",
+              "icon": "scene"
+            },
+            {
+              "id": "LuminiAmbientale",
+              "label": "Lumini ambientale",
+              "value": false,
+              "type": "box-col",
+              "displayType": "box-col",
+              "icon": "light_bulb"
+            },
+            {
+              "id": "AerConditionat",
+              "label": "Aer conditionat",
+              "value": false,
+              "type": "box-col",
+              "displayType": "box-col",
+              "icon": "air_conditioning"
+            },
+            {
+              "id": "Terasa/Gradina",
+              "label": "Terasa/Gradina",
+              "value": false,
+              "type": "box-col",
+              "displayType": "box-col",
+              "icon": ""
+            },
+            {
+              "id": "SmokingArea",
+              "label": "Smoking area",
+              "value": false,
+              "type": "box-col",
+              "displayType": "box-col",
+              "icon": "smoking_area"
+            },
+            {
+              "id": "Piscina",
+              "label": "Smoking lounge",
+              "value": false,
+              "type": "box-col",
+              "displayType": "box-col",
+              "icon": "pool"
+            },
+            {
+              "id": "Cazare",
+              "label": "Camere cazare",
+              "value": false,
+              "type": "box-col",
+              "displayType": "box-col",
+              "icon": "accommodation"
+            }
+          ]
+        },
+        {
+          "title": "Servicii complementare",
+          "name": "ServiciiComplementare",
+          "multiSelection": true,
+          "displayDirectionX": false,
+          "displayFilterMultiSelection": false,
+          "displayFilters": false,
+          "displayType": "check",
+          "data": [
+            {
+              "id": "Valet parking",
+              "label": "Valet parking",
+              "value": false,
+              "type": "check"
+            },
+            {
+              "id": "Paza si securitate",
+              "label": "Paza si securitate",
+              "value": false,
+              "type": "check"
+            },
+            {
+              "id": "Decoratiuni",
+              "label": "Decoratiuni",
+              "value": false,
+              "type": "check"
+            },
+            {
+              "id": "AranjamenteFlorale",
+              "label": "Aranjamente florale",
+              "value": false,
+              "type": "check"
+            },
+            {
+              "id": "Catering",
+              "label": "Catering",
+              "value": false,
+              "type": "check"
+            },
+            {
+              "id": "Hostess",
+              "label": "Hostess",
+              "value": false,
+              "type": "check"
+            },
+            {
+              "id": "CamereDisponibile",
+              "label": "Camere disponibile",
+              "value": false,
+              "type": "check"
+            },
+            {
+              "id": "PosibilitateDeCeremonie",
+              "label": "Posibilitate de ceremonie",
+              "value": false,
+              "type": "check"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Formatii",
+      "img": "/assets/formatii-icon.svg",
+      "data": [
+        {
+          "title": "Gen muzical",
+          "multiSelection": false,
+          "displayDirectionX": false,
+          "displayFilterMultiSelection": true,
+          "displayFilters": true,
+          "displayType": "check",
+          "name": "GenMuzical",
+          "data": [
+            {
+              "id": "Taraf",
+              "type": "check",
+              "displayType": "check",
+              "label": "Taraf",
+              "value": false
+            },
+            {
+              "id": "Rock",
+              "type": "check",
+              "displayType": "check",
+              "label": "Rock",
+              "value": false
+            },
+            {
+              "id": "Orchestra",
+              "type": "check",
+              "displayType": "check",
+              "label": "Orchestra",
+              "value": false
+            }
+          ]
+        },
+        {
+          "title": "Membri",
+          "name": "Membri",
+          "displayDirectionX": true,
+          "displayFilters": true,
+          "displayFilterMultiSelection": false,
+          "multiSelection": true,
+          "displayType": "rondbox",
+          "data": [
+            {
+              "id": "1-3membri",
+              "type": "box-row",
+              "displayType": "rondbox",
+              "label": "1-3 membri",
+              "value": false
+            },
+            {
+              "id": "3-6membri",
+              "type": "box-row",
+              "label": "3-6 membri",
+              "displayType": "rondbox",
+              "value": false
+            },
+            {
+              "id": "6-10membri",
+              "type": "box-row",
+              "label": "6-10 membri",
+              "displayType": "rondbox",
+              "value": false
+            },
+            {
+              "id": ">10membri",
+              "type": "box-row",
+              "label": ">10 membri",
+              "displayType": "rondbox",
+              "value": false
+            }
+          ]
+        },
+        {
+          "title": "Facilitati",
+          "name": "Facilitati",
+          "multiSelection": true,
+          "displayDirectionX": false,
+          "displayFilterMultiSelection": true,
+          "displayFilters": true,
+          "displayType": "box-col",
+          "data": [
+            {
+              "id": "Scena",
+              "label": "Scena",
+              "value": true,
+              "type": "box-col",
+              "displayType": "box-col",
+              "icon": "scene"
+            },
+            {
+              "id": "Lumini",
+              "label": "Lumini",
+              "value": false,
+              "type": "box-col",
+              "displayType": "box-col",
+              "icon": "lights"
+            },
+            {
+              "id": "MC",
+              "label": "MC",
+              "value": false,
+              "type": "box-col",
+              "displayType": "box-col",
+              "icon": "mc"
+            },
+            {
+              "id": "Sonorizare",
+              "label": "Sonorizare",
+              "value": false,
+              "type": "box-col",
+              "displayType": "box-col",
+              "icon": "sound"
+            }
+          ]
+        },
+        {
+          "title": "Tip Serviciu",
+          "name": "TipServiciu",
+          "multiSelection": true,
+          "displayDirectionX": false,
+          "displayFilterMultiSelection": false,
+          "displayFilters": false,
+          "displayType": "check",
+          "data": [
+            {
+              "id": "Solist",
+              "label": "Solist",
+              "value": false,
+              "type": "check"
+            },
+            {
+              "id": "Taraf",
+              "label": "Taraf",
+              "value": false,
+              "type": "check"
+            },
+            {
+              "id": "Band",
+              "label": "Band",
+              "value": false,
+              "type": "check"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Foto",
+      "img": "/assets/fotovide-icon.svg"
+    },
+    {
+      "name": "Bar",
+      "img": "/assets/drinks-icon.svg"
+    },
+    {
+      "name": "Decoratiuni",
+      "img": "/assets/flori-icon.svg"
+    },
+    {
+      "name": "Transport",
+      "img": "/assets/transport-icon.svg"
+    },
+    {
+      "name": "Artificii",
+      "img": "/assets/efecte-icon.svg"
+    },
+    {
+      "name": "Entertaineri",
+      "img": "/assets/entertainer-icon.svg"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<div class="average-rating">
+  <span class="rating-value" *ngIf="ratingDisplay" [style.fontSize]="ratingFontSize">
+    {{ ratingValue }}
+  </span>
+  <span #starElement class="stars">★★★★★</span>
+</div>

@@ -1,0 +1,15 @@
+@import "/src/sass/variables";
+
+.p {
+  @media (max-width: $max-width-for-mobile) {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+  }
+
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}

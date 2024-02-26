@@ -1,0 +1,57 @@
+@import "/src/sass/variables";
+
+:host {
+  display: block;
+}
+
+.image-preview {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+  width: 100%;
+  height: calc(100vh - 56px);
+
+  @media only screen and (max-width: 1023px) {
+    height: calc(100vh - 56px - 84px);
+  }
+
+  overflow: hidden;
+  figure {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .video-figure {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    max-height: calc(100vh - 56px);
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+
+  iframe {
+    width: calc(100% - 120px);
+    height: calc(100vh - 120px);
+  }
+
+  .mat-icon {
+    position: absolute;
+    transform: scale(1.5);
+    cursor: pointer;
+
+    &.previous-arrow {
+      left: 20px;
+    }
+
+    &.next-arrow {
+      right: 20px;
+    }
+  }
+}

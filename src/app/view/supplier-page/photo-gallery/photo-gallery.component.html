@@ -1,0 +1,32 @@
+<div class="photo-gallery-container">
+  <div class="photo-video-header">
+    <div class="control-button" href="/" (click)="goBack()">
+      <img src=" /assets/icons/arrow-left.svg" alt="" />
+    </div>
+    <div class="tabs">
+      <span
+        class="tab-labels"
+        (click)="photoTab = true; videoTab = false"
+        [ngClass]="{ active: photoTab }"
+        >Photo</span
+      >
+      <span
+        class="tab-labels"
+        (click)="photoTab = false; videoTab = true"
+        [ngClass]="{ active: videoTab }"
+        >Video</span
+      >
+    </div>
+  </div>
+  <div class="photo-grid" *ngIf="photoTab">
+    <!-- <ng-container *ngFor="let photo of photosAndVideos.photos">
+            <img class="image-mix" #myImage [src]="photo" alt="altceva"
+                [ngClass]="this.myImage.height > this.myImage.width ? 'portrait': 'landscape'">
+        </ng-container> -->
+
+    <img src="{{ photosAndVideos.photos[photosAndVideos.imageIndex] }}" alt="" class="image-mix" />
+  </div>
+  <div class="video-wrapper" *ngIf="videoTab">
+    <div class="video-element"></div>
+  </div>
+</div>

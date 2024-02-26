@@ -1,0 +1,3 @@
+[submodule "marity-ui-kit"]
+	path = marity-ui-kit
+	url = https://github.com/Citizens-of-Tehnology/marity-ui-kit.git

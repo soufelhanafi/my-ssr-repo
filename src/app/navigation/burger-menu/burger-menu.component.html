@@ -1,0 +1,39 @@
+<div class="navbar">
+  <button (click)="closeDropdown(businessWebSite)" class="download-button">Devino furnizor</button>
+  <div class="menu-icon" (click)="toggleDropdown()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <ul class="menu" [class.show]="showDropdown">
+    <span class="close-button" (click)="toggleDropdown()"
+      ><img src="/assets/icons/close_burger_button.svg" alt=""
+    /></span>
+    <div class="nav-items-b">
+      <li class="burger-nav-item" (click)="closeDropdown('https://marity.ro/explore')"
+        >Furnizori</li
+      >
+      <li class="burger-nav-item" (click)="closeDropdown('https://marity.ro')">Marity</li>
+      <li class="burger-nav-item" (click)="closeDropdown(client360WebSite)">360 Planner</li>
+      <li class="burger-nav-item" (click)="closeDropdown(businessWebSite)">Business</li>
+      <li class="burger-nav-item" (click)="closeDropdown(businessWebSite)">Devino furnizor</li>
+    </div>
+    <div class="marity-download-buttons">
+      <img
+        src="/assets/images/download_button_google_play.svg"
+        alt=""
+        class="download-logo"
+        (click)="
+          closeDropdown('https://play.google.com/store/apps/details?id=cot.maritybusiness.app')
+        "
+      />
+      <img
+        src="/assets/images/download_button_app_store.svg"
+        alt=""
+        class="download-logo"
+        (click)="closeDropdown('https://apps.apple.com/us/app/marity-business/id1669983630')"
+      />
+    </div>
+  </ul>
+</div>

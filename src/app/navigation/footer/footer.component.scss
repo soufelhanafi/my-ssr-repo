@@ -1,0 +1,85 @@
+@import "/src/sass/variables";
+
+.footer-container {
+  padding: 0 16px;
+  background-color: #e5e5ea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .footer-content {
+    max-width: 936px;
+    width: 100%;
+    padding: 32px 0 64px;
+
+    @media (max-width: $max-width-for-mobile) {
+      padding: 32px 0 24px;
+    }
+
+    .marity-business-logo {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      background: linear-gradient(180deg, #ff2c62 0%, #724c9b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 24px;
+
+      @media (max-width: $max-width-for-mobile) {
+        display: none;
+      }
+    }
+  }
+
+  .footer-columns {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $max-width-for-mobile) {
+      flex-direction: column;
+    }
+
+    .column-item {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      @media (max-width: $max-width-for-mobile) {
+        margin-bottom: 24px;
+      }
+
+      .social-link {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .marity-download-buttons {
+        display: flex;
+        gap: 8px;
+      }
+
+      &.social-media {
+        @media (max-width: $max-width-for-mobile) {
+          flex-direction: row;
+          justify-content: space-between;
+          margin-bottom: 24px;
+        }
+
+        @media (max-width: 384px) {
+          flex-direction: column;
+        }
+      }
+    }
+
+    .download {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    span {
+      cursor: pointer;
+    }
+  }
+}

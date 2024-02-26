@@ -1,0 +1,15 @@
+@import "src/sass/_variables";
+
+.img-card {
+  margin-bottom: 8px;
+
+  &__img-container {
+    width: 160px;
+    height: 240px;
+    margin-bottom: 4px;
+
+    img {
+      border-radius: $--main--border-radius-button;
+    }
+  }
+}

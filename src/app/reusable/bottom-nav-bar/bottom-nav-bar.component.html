@@ -1,0 +1,23 @@
+<div id="bottom-navbar" class="bottom-nav-bar">
+  <a routerLink="/explore">
+    <div class="bottom-nav-bar__icon-container">
+      <mat-icon [innerHTML]="router.url.includes('explore') ? 'search' : 'home'"></mat-icon>
+    </div>
+    <div>Furnizori</div>
+  </a>
+  <a routerLinkActive="favorites" routerLink="/favorites">
+    <div class="bottom-nav-bar__icon-container">
+      <mat-icon>favorite_border</mat-icon>
+    </div>
+    <div>Favorite</div>
+  </a>
+  <a routerLink="/login">
+    <div class="bottom-nav-bar__icon-container">
+      <!-- <mat-icon>person</mat-icon> -->
+      <span style="height: 24px">
+        <img src="\assets\icons\supplier_page_bottom_navigation\marity.svg" alt="" />
+      </span>
+    </div>
+    <div>Devino furnizor</div>
+  </a>
+</div>

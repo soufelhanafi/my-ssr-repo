@@ -1,0 +1,76 @@
+<div class="footer-container">
+  <div class="footer-content">
+    <div class="marity-business-logo">Marity Business</div>
+
+    <div class="footer-columns">
+      <div class="column-item social-media">
+        <div class="social-link" (click)="goToLink('https://www.facebook.com/marityromania')">
+          <img
+            src="assets/images/icons/social-icons/facebook_icon.svg"
+            alt="social_media_icon"
+          /><span>Facebook</span>
+        </div>
+        <div class="social-link">
+          <img
+            src="../../../assets/icons/youtube-2-logo-svgrepo-com.svg"
+            alt="social_media_icon"
+            height="48px"
+            (click)="goToLink('https://www.youtube.com/@marityro')"
+          />
+        </div>
+        <div class="social-link" (click)="goToLink('https://www.tiktok.com/@marityro')">
+          <img
+            src="../../../assets/icons/logo-tiktok-svgrepo-com.svg"
+            alt="social_media_icon"
+            width="24px"
+            height="24px"
+          /><span>Tiktok</span>
+        </div>
+      </div>
+      <div class="column-item">
+        <!-- <span class="footer-column-label">Despre noi</span><span
+                    class="footer-column-label">Functionalitati</span><span
+                    class="footer-column-label">Promotii</span><span class="footer-column-label">Abonamente</span><span
+                    class="footer-column-label">Integrare</span><span class="footer-column-label">Contact</span> -->
+      </div>
+      <div class="column-item">
+        <!-- <span class="footer-column-label">Suport</span>
+                <span class="footer-column-label">Cariere</span>
+                <span class="footer-column-label">Parteneri</span> -->
+        <span class="footer-column-label" routerLink="/politica-cookie">Politica cookie</span>
+        <span class="footer-column-label" routerLink="/politica-confidentialitate"
+          >Confidentialitate</span
+        >
+        <span class="footer-column-label" routerLink="/termeni-si-conditii"
+          >Termeni si conditii</span
+        >
+        <!-- <span class="footer-column-label">Etica si conformitate</span> -->
+      </div>
+      <div class="column-item">
+        <div class="download">
+          <img
+            class="logo-footer-marity"
+            src="/assets/images/marity_square_logo_small.svg"
+            alt=""
+          />
+          <span (click)="goToLink(businessWebSite)">Descarca Marity</span>
+        </div>
+        <div class="marity-download-buttons">
+          <img
+            src="/assets/images/download_button_app_store.svg"
+            alt=""
+            class="download-logo"
+            (click)="goToLink('https://apps.apple.com/us/app/marity-business/id1669983630')"
+          /><img
+            src="/assets/images/download_button_google_play.svg"
+            alt=""
+            class="download-logo"
+            (click)="
+              goToLink('https://play.google.com/store/apps/details?id=cot.maritybusiness.app')
+            "
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

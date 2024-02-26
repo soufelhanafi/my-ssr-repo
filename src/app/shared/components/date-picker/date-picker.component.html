@@ -1,0 +1,53 @@
+<div class="calendar-wrapper">
+  <div>
+    <div class="calendar-title">CALENDAR</div>
+    <mat-calendar
+      #calendar
+      [dateFilter]="datefilter"
+      [selected]="selectedDate"
+      [minDate]="today"
+      (swipeLeft)="nextMonth()"
+      (swipeRight)="previousMonth()"
+      [dateClass]="dateClass"
+      [startAt]="startDate"
+      (selectedChange)="onSelectedDate($event)"
+    >
+    </mat-calendar>
+  </div>
+  <button *ngIf="!isMobile" class="offer-button" (click)="sendDate()">
+    Cere o oferta de pret pentru aceasta data
+  </button>
+
+  <div *ngIf="isMobile" class="submit-row">
+    <div class="selected-date" *ngIf="selectedDateMonthYear">
+      <p class="selected-date-name">{{ selectedDateName }}</p>
+      <p class="selected-date-day">{{ selectedDateMonthYear }}</p>
+    </div>
+
+    <div class="select-date" *ngIf="!selectedDateMonthYear"> Selecteaza data </div>
+
+    <button class="submit-button" type="submit">
+      <img
+        class="submit-button-image"
+        src="/assets/icons/supplier_page_facilities/supplier_page_request_offer/request_offer_submit.svg"
+        alt=""
+      />
+      Trimite mesaj
+    </button>
+  </div>
+</div>
+
+<div class="calendar-footer">
+  <div class="day">
+    <div class="day-color-1"></div>
+    <span class="day-label">Sărbătoare religioasă</span>
+  </div>
+  <div class="day">
+    <div class="day-color-2"></div>
+    <span class="day-label">Zile Libere</span>
+  </div>
+  <div class="day">
+    <div class="day-color-3"></div>
+    <span class="day-label">Zile Ocupate</span>
+  </div>
+</div>

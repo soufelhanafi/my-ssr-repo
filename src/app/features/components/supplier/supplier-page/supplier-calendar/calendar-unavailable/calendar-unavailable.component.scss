@@ -1,0 +1,92 @@
+@import "/src/sass/variables";
+
+.calendar-wrapper {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 16px;
+  border: 1px solid $request-offer-border;
+
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+
+    .title {
+      color: $primary-color;
+      font-family: "SF Pro Display";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 21px;
+    }
+
+    .date-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-self: stretch;
+
+      .current-date-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .current-date {
+          color: $calendar-lightgray-text;
+          font-family: "SF Pro Display";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 25px;
+        }
+      }
+
+      .date-navigation {
+        display: flex;
+        padding: 10px;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .mat-icon {
+        scale: 0.7;
+      }
+    }
+  }
+
+  .unavailable-wrapper {
+    display: flex;
+    padding: 67px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+
+    .unavailable-title {
+      color: $black-text;
+      text-align: center;
+      font-family: "SF Pro Display";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 25px;
+    }
+
+    .unavailable-title {
+      color: $black-text;
+      text-align: center;
+      font-family: "SF Pro Display";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 25px;
+    }
+  }
+}

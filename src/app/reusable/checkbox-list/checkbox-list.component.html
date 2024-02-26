@@ -1,0 +1,38 @@
+<!-- <div [ngSwitch]="listType"> -->
+
+<div *ngIf="listType === 'checkbox' || !isMobile">
+  <ul class="location-type" [formGroup]="selectedItems">
+    <li *ngFor="let type of listItems; let i = index">
+      <mat-checkbox [formControlName]="type.id" ngDefaultControl *ngIf="i < 5 || showAll">
+        {{ type.label }}
+      </mat-checkbox>
+    </li>
+  </ul>
+  <button
+    class="simple-link"
+    *ngIf="listItems.length > 5 && !showAll"
+    mat-button
+    (click)="showAll = true"
+  >
+    + Vezi mai multe
+  </button>
+</div>
+
+<div *ngIf="listType === 'card' && isMobile">
+  <ul class="facilities" [formGroup]="selectedItems">
+    <li class="facility-card" *ngFor="let type of listItems; let i = index">
+      <mat-checkbox [formControlName]="type.id" ngDefaultControl>
+        <div class="card-content">
+          <div class="facility-card__icon-container">
+            <img
+              src="assets/facilities/{{ type.icon }}.svg"
+              [src-fallback]="'/assets/facilities/wedding-arch.svg'"
+            />
+          </div>
+          <div class="label"> {{ type.label }}</div>
+        </div>
+      </mat-checkbox>
+    </li>
+  </ul>
+</div>
+<!-- </div> -->

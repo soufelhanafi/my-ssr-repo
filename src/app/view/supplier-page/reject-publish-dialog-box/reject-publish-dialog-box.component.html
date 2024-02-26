@@ -1,0 +1,21 @@
+<div class="body">
+  <div class="title">
+    <h2>Respingere</h2>
+  </div>
+  <div class="content">
+    <div class="form-group">
+      <label for="comment">Motivul respingerii:</label>
+      <textarea class="form-control" rows="5" id="rejectReason" #rejectReason></textarea>
+    </div>
+  </div>
+  <div class="footer">
+    <button
+      type="button"
+      class="btn btn-default cancel"
+      data-dismiss="modal"
+      (click)="onCancelClick()"
+      >Anulează</button
+    >
+    <button type="button" class="btn btn-primary ok" (click)="onRejectClick()">Respinge</button>
+  </div>
+</div>

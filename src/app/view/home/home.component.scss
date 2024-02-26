@@ -1,0 +1,289 @@
+@import "src/sass/_variables";
+
+.title {
+  margin: 48px auto;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 76px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 720px;
+  background: linear-gradient(180deg, #ff2c62 0%, #724c9b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @media (max-width: $max-width-for-mobile) {
+    margin: 24px auto 0;
+    font-family: SF Pro Display;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0 24px;
+  }
+}
+
+.main-title {
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 70px auto 32px;
+  text-align: center;
+
+  @media (max-width: $max-width-for-mobile) {
+    font-size: 18px;
+    margin: 40px auto 32px;
+  }
+}
+
+.supplier-section {
+  padding: 0 16px;
+  max-width: $max-width-for-suppliers;
+  margin: 0 auto;
+  margin-bottom: 32px;
+
+  .supplier-section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    .all-supplier {
+      font-size: 18px;
+      font-weight: 700;
+
+      &.wed {
+        margin: 0 auto 32px;
+        font-size: 64px;
+
+        @media (max-width: $max-width-for-mobile) {
+          font-size: 18px;
+          margin-top: 40px;
+        }
+      }
+    }
+
+    .see-all-wrap {
+      cursor: pointer;
+      display: flex;
+      gap: 16px;
+
+      .see-all-label {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .carousel-container-custom {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    @media (max-width: 505px) {
+      // flex-direction: column;
+      flex-wrap: nowrap;
+      overflow-y: auto;
+    }
+
+    .app-supplier {
+      @media (max-width: 505px) {
+        width: 100%;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.wrapper {
+  margin: $--main--mobile-margin-lateral;
+  background-image: url("/src/assets/Home/startNowBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.main-section {
+  margin-bottom: 36px;
+
+  &.boxed-width {
+    padding: 0 16px;
+  }
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo-marity-mid {
+    margin-top: 48px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.24));
+
+    @media (max-width: $max-width-for-mobile) {
+      width: 56px;
+    }
+  }
+
+  .marity-business-label {
+    margin: 12px 0 24px;
+  }
+
+  .marity-download-buttons {
+    display: flex;
+    gap: 8px;
+
+    @media (max-width: $max-width-for-mobile) {
+      gap: 24px;
+    }
+  }
+
+  .title-main-label {
+    max-width: $max-content-width;
+    text-align: center;
+    margin-top: 24px;
+    font-weight: 700;
+    font-size: 88px;
+    line-height: 105px;
+
+    @media (max-width: $max-width-for-mobile) {
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 53px;
+      color: linear-gradient(180deg, #ff2c62 0%, #724c9b 100%);
+    }
+  }
+}
+
+.header-list-button-mobile {
+  border: 2px solid black;
+  padding: 16px 24px;
+  background: transparent;
+  border-radius: 20px;
+  margin-bottom: 64px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+
+  .arrow-right {
+    margin-left: 24px;
+  }
+
+  &.margins {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    margin: 32px auto 40px;
+  }
+}
+
+.schedule-for-mobile {
+  height: 215px;
+  background-image: url("/assets/images/wedding_day.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.discover-more {
+    background-image: url("/assets/images/smoke-kiss.svg");
+
+    @media (min-width: $max-width-for-mobile) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $max-width-for-mobile) {
+    display: none;
+  }
+}
+
+.schedule-container {
+  position: relative;
+  padding: 90px 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 84px;
+  height: 560px;
+  background-image: url("/assets/images/wedding_day.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $max-width-for-mobile) {
+    height: fit-content;
+    padding: 32px 16px;
+    margin-bottom: 0;
+    background-image: none;
+    background-color: black;
+  }
+
+  .schedule-content {
+    width: 936px;
+    height: 100%;
+    display: flex;
+    position: relative;
+
+    @media (max-width: $max-width-for-mobile) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .text-description {
+      align-self: center;
+      color: white;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 76px;
+
+      @media (max-width: $max-width-for-mobile) {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+    }
+
+    .button-transparent {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: white;
+      border-radius: 20px;
+      border: none;
+      padding: 16px 24px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      align-self: flex-end;
+
+      @media (max-width: $max-width-for-mobile) {
+        position: relative;
+        align-self: center;
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        padding: 16px 16px;
+        border-radius: 12px;
+      }
+    }
+  }
+
+  &.discover-more {
+    background-image: url("/assets/images/smoke-kiss.svg");
+    margin-top: 48px;
+
+    @media (max-width: $max-width-for-mobile) {
+      height: fit-content;
+      padding: 32px 16px;
+      margin: 0 0 48px;
+      background-image: none;
+      background-color: black;
+    }
+  }
+}

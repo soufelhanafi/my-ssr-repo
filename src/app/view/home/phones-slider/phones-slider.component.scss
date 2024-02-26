@@ -1,0 +1,47 @@
+@import "/src/sass/variables";
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-wrapper {
+  display: flex;
+  animation: scrollAnimation 40s linear infinite;
+  gap: 24px;
+
+  @media (max-width: $max-width-for-mobile) {
+    gap: 12px;
+  }
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.image-container {
+  width: auto;
+
+  &:nth-child(odd) {
+    margin-top: 53px;
+
+    @media (max-width: $max-width-for-mobile) {
+      margin-top: 38px;
+    }
+  }
+}
+
+.image {
+  width: 296px;
+  height: auto;
+
+  @media (max-width: $max-width-for-mobile) {
+    height: 460px;
+    width: auto;
+  }
+}

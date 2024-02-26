@@ -1,0 +1,97 @@
+<section class="filter-dialog">
+  <div class="filter-dialog__header" *ngIf="isMobile">
+    <button mat-icon-button (click)="closeFilterDialog()" class="close-icon">
+      <mat-icon matSuffix color="black" inline="false">close</mat-icon>
+    </button>
+    <div class="heading-3">Filtre</div>
+    <mat-divider *ngIf="isMobile"></mat-divider>
+  </div>
+  <div class="filter-dialog__form" [ngClass]="isMobile ? 'mobile' : ''">
+    <!-- <div class="filter-dialog__section">
+            <app-filter-bar [supplierTypes]="supplierTypes" [activeIndex]="activeSupplierTypeIndex"
+                (selectedType)="updateFilters($event)"></app-filter-bar>
+        </div> -->
+    <!-- <mat-divider *ngIf="isMobile"></mat-divider> -->
+
+    <div *ngIf="selectedType && selectedType.data">
+      <div *ngFor="let filter of selectedType.data">
+        <div class="filter-dialog__section" *ngIf="filter.displayFilters">
+          <div class="heading-2">
+            {{ filter.title }}
+          </div>
+          <div [ngSwitch]="filter.displayType">
+            <app-checkbox-list
+              *ngSwitchCase="'checkbox'"
+              [listItems]="filter.data"
+              listType="checkbox"
+              [resetRequired]="resetRequired"
+              (checkboxSelection)="updateSelection($event, filter.name)"
+            ></app-checkbox-list>
+            <app-checkbox-list
+              *ngSwitchCase="'box-col'"
+              [listItems]="filter.data"
+              listType="card"
+              [resetRequired]="resetRequired"
+              (checkboxSelection)="updateSelection($event, filter.name)"
+            ></app-checkbox-list>
+            <app-button-toggle-group
+              *ngSwitchCase="'round-box'"
+              [options]="filter.data"
+              [resetRequired]="resetRequired"
+              [isMultipleSelection]="filter.displayFilterMultiSelection"
+              (toggleGroupSelection)="updateSelection($event, filter.name)"
+            ></app-button-toggle-group>
+            <app-checkbox-list
+              *ngSwitchDefault
+              [listItems]="filter.data"
+              listType="checkbox"
+              [resetRequired]="resetRequired"
+              (checkboxSelection)="updateSelection($event, filter.name)"
+            ></app-checkbox-list>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="filter-dialog__section">
+        <div class="heading-2">
+            Tipul locatiei
+        </div>
+        <app-checkbox-list [listItems]="locationTypes" listType="checkbox"
+            (checkboxSelection)="updateSelection($event)"></app-checkbox-list>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="filter-dialog__section">
+        <div class="heading-2">
+            Capacitate invitati
+        </div>
+        <app-button-toggle-group [options]="capacities" [isMultipleSelection]="false"
+            (toggleGroupSelection)="updateSelection($event)"></app-button-toggle-group>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="filter-dialog__section">
+        <div class="heading-2">
+            Mediu
+        </div>
+        <app-checkbox-list [listItems]="environmentOptions" listType="checkbox"
+            (checkboxSelection)="updateSelection($event)"></app-checkbox-list>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="filter-dialog__section">
+        <div class="heading-2">
+            Facilitati
+        </div>
+        <app-checkbox-list [listItems]="facilities" listType="card" (checkboxSelection)="updateSelection($event)"
+            *ngIf="isMobile"></app-checkbox-list>
+    </div> -->
+  <div class="bottom-buttons">
+    <button mat-button *ngIf="isMobile" (click)="resetFilters()">Sterge filtrele</button>
+    <button
+      mat-flat-button
+      color="accent"
+      (click)="searchService.emitFilterObject(this.filterQuery)"
+      >Vezi rezultatele</button
+    >
+  </div>
+</section>

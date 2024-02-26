@@ -1,0 +1,134 @@
+.calendar-mobile-container {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    .title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    .close-icon {
+      width: 32px;
+      height: 32px;
+      color: black;
+      background: white;
+      border-radius: 50%;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  .calendar-wrapper {
+    padding: 16px;
+    background-color: #f4f4f4;
+    border-radius: 16px;
+
+    ::ng-deep .mat-calendar-body-cell-container {
+      .mat-calendar-body-cell.mat-calendar-body-disabled.booked-date {
+        .mat-focus-indicator {
+          color: #d94a8c;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 21px;
+        }
+      }
+    }
+
+    .calendar-title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    .calendar-footer {
+      display: flex;
+      justify-content: space-between;
+      background-color: #f8f8f8;
+      margin: 0 -16px -16px;
+      border-bottom-right-radius: 16px;
+      border-bottom-left-radius: 16px;
+      padding: 16px;
+
+      .day {
+        display: flex;
+        align-items: center;
+
+        &-color {
+          &-1 {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            background-color: black;
+            opacity: 0.3;
+          }
+          &-2 {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            background-color: black;
+          }
+          &-3 {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            background-color: #ff5c88;
+          }
+        }
+
+        .day-label {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 21px;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  .calendar-bottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100px + 24px);
+
+    &-label-not-selected {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      opacity: 0.3;
+    }
+
+    &-label-selected {
+      .selected-date-label {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+      }
+      .selected-date {
+        color: #724c9b;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    &-button {
+      border-radius: 8px;
+      background-color: #724c9b;
+      color: white;
+      font-size: 18px;
+      padding: 16px;
+      border: 0px;
+      height: 52px;
+
+      &:disabled {
+        background-color: #e5e5ea;
+      }
+    }
+  }
+}

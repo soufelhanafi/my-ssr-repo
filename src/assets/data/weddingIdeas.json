@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "title": "Flori pentru nuntasi – Cum sa alegi cocardele potrivite?",
+      "backgroundCssClass": "planMarity",
+      "isSmall": true,
+      "link": "/destinations/bali"
+    },
+    {
+      "title": "Acte necesare pentru o cununie civila – Sfaturi si recomandari utile",
+      "backgroundCssClass": "planMarity",
+      "isSmall": true,
+      "link": "/destinations/bali"
+    },
+    {
+      "title": "Nunta primavara – Idei originale si inedite, pentru un eveniment deosebit si unic!",
+      "backgroundCssClass": "planMarity",
+      "isSmall": true,
+      "link": "/destinations/bali"
+    },
+    {
+      "title": "Petrecerea burlacitelor: Idei inedite pentru un party reusit!",
+      "backgroundCssClass": "planMarity",
+      "isSmall": true,
+      "link": "/destinations/bali"
+    },
+    {
+      "title": "Furatul miresei – Un obicei popular la orice nunta!",
+      "backgroundCssClass": "planMarity",
+      "isSmall": true,
+      "link": "/destinations/bali"
+    }
+  ]
+}

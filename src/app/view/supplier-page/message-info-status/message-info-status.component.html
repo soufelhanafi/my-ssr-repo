@@ -1,0 +1,11 @@
+<div class="message-info-status">
+  <img class="image" src="{{ imageSource }}" alt="ilustration" />
+  <div class="title">{{ messageTitle }}</div>
+  <div class="message">{{ statusMessage }}</div>
+  <button
+    (click)="clickOnButton()"
+    [ngClass]="statusData?.sent ? 'button-back' : 'button-try'"
+    mat-flat-button
+    >{{ buttonLabel }}</button
+  >
+</div>

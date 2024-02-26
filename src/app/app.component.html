@@ -1,0 +1,8 @@
+<app-navigation-menu></app-navigation-menu>
+<!-- <app-home></app-home> -->
+<!-- <app-explore></app-explore> -->
+<router-outlet></router-outlet>
+
+<app-footer [hidden]="componentMobileActivePopupName"></app-footer>
+
+<app-bottom-nav-bar *ngIf="isMobile && !router.url.includes('supplier')"></app-bottom-nav-bar>

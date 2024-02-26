@@ -1,0 +1,77 @@
+<div class="event-section">
+  <div class="return-button" *ngIf="isMobile === false" (click)="goToLink('/')">
+    <img src="assets/arrow-left.svg" />
+    <span>Rezultate</span>
+  </div>
+
+  <div class="event-info" *ngIf="isMobile === false">
+    <div class="event-info-title">
+      <div class="event-title">
+        <div class="event-icon">
+          <img src="assets/supplier-icon.svg" />
+        </div>
+
+        <div class="title">{{ supplierAbout?.title }}</div>
+      </div>
+
+      <div class="event-rating" *ngIf="rating">
+        <span>{{ rating | number: "1.1-1" }}</span>
+
+        <div class="event-rating-stars">
+          <img class="rating-star" src="assets/stars.svg" *ngFor="let i of starsArray" />
+          <div class="event-rating-cover" [style.width.%]="100 - (rating * 100) / 5">
+            <img class="rating-star" src="assets/empty-star.svg" *ngFor="let i of starsArray" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-menu">
+      <div class="event-menu-navigation">
+        <div class="event-menu-location">
+          <span>
+            <span *ngIf="supplierAbout?.address">{{ supplierAbout?.address }}</span
+            ><span *ngIf="supplierAbout?.address">, {{ supplierAbout?.county }}</span></span
+          >
+        </div>
+
+        <div class="event-menu-details">
+          <span *ngIf="supplierFacility?.CapacitateRange?.minCap"
+            >{{ supplierFacility?.CapacitateRange?.minCap }}
+            <span *ngIf="supplierFacility?.CapacitateRange?.maxCap">
+              - {{ supplierFacility?.CapacitateRange?.maxCap }} </span
+            >persoane</span
+          >
+          <span
+            *ngIf="
+              supplierAbout?.location?.coordinates && supplierAbout?.location?.coordinates?.length
+            "
+            class="event-menu-navigation-item event-important-item"
+            (click)="goToLink(emptyLine)"
+            >Vezi harta</span
+          >
+          <span
+            *ngIf="supplierAbout?.websiteLink"
+            class="event-menu-navigation-item event-important-item"
+            (click)="goToLink(supplierAbout?.websiteLink)"
+            >Website</span
+          >
+          <span
+            class="event-menu-navigation-item"
+            (click)="goToLink('tel: {{supplierAbout.contact.phone}}')"
+          >
+            {{ supplierAbout?.contact?.phone }}</span
+          >
+        </div>
+      </div>
+      <div class="event-menu-socials">
+        <img
+          src="assets/facebook.svg"
+          (click)="goToLink('https://www.facebook.com/marityromania')"
+        />
+        <img src="assets/instagram.svg" />
+        <img src="assets/youtube.svg" />
+      </div>
+    </div>
+  </div>
+</div>

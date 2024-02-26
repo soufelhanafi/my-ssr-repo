@@ -1,0 +1,73 @@
+<section [ngClass]="isMobile ? 'mobile' : APP_SETTINGS.EMPTY_LINE">
+  <h3>Despre noi</h3>
+
+  <section>
+    <h5>Descriere</h5>
+
+    <div class="description" [ngClass]="[showMore ? 'show-less' : 'show-more']">
+      <span [innerText]="supplierData?.about?.description"></span>
+    </div>
+
+    <div class="description-action" (click)="showMoreContent()">
+      <span class="heading-3">
+        {{ showMore ? "Vezi mai puțin" : "Vezi mai mult" }}
+
+        <mat-icon
+          [svgIcon]="showMore ? 'above_arrow' : 'below_arrow'"
+          class="description-icon"
+        ></mat-icon>
+      </span>
+    </div>
+  </section>
+
+  <section class="icon-label-wrap">
+    <h5>Facilități</h5>
+
+    <div class="icon-label">
+      <ng-container *ngFor="let facility of facilities?.data">
+        <div class="icon-label-item">
+          <mat-icon [svgIcon]="facility?.icon"></mat-icon>
+          <span class="heading-3">{{ facility.label }}</span>
+        </div>
+      </ng-container>
+    </div>
+  </section>
+
+  <section class="icon-label-wrap">
+    <h5>Recomandat pentru</h5>
+
+    <div class="icon-label">
+      <ng-container *ngFor="let event of eventTypes">
+        <div class="icon-label-item">
+          <mat-icon [svgIcon]="event?.optionValue"></mat-icon>
+          <span class="heading-3">{{ event.optionText }}</span>
+        </div>
+      </ng-container>
+    </div>
+  </section>
+
+  <section class="frequent-questions-wrap">
+    <h5>Întrebări frecvente</h5>
+
+    <div class="question-wrap" *ngFor="let question of faqPreview">
+      <p class="title heading-3">{{ question.title }}</p>
+
+      <div class="question-tick-wrap">
+        <ng-container *ngFor="let answer of question?.data">
+          <p *ngIf="answer.type === 'number'" class="heading-3">
+            {{ answer.value }}
+          </p>
+
+          <p *ngIf="answer.type === 'switch'" class="heading-3">
+            <span class="tick-mark"></span>
+            <span class="heading-3">{{ answer.label }}</span>
+          </p>
+
+          <p *ngIf="answer.type === 'yes-no'">
+            {{ answer.value ? "DA" : "NU" }}
+          </p>
+        </ng-container>
+      </div>
+    </div>
+  </section>
+</section>

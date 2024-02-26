@@ -1,0 +1,49 @@
+$margins-top: (32);
+$margins-right: (32);
+$margins-bottom: (32);
+$margins-left: (32);
+$margins-top-bottom: (32);
+$margins-left-right: (32);
+$margins: (32);
+
+@each $margin in $margins-top {
+  .margin-top-#{$margin} {
+    margin-top: #{$margin}px;
+  }
+}
+
+@each $margin in $margins-right {
+  .margin-right-#{$margin} {
+    margin-right: #{$margin}px;
+  }
+}
+
+@each $margin in $margins-bottom {
+  .margin-bottom-#{$margin} {
+    margin-bottom: #{$margin}px;
+  }
+}
+
+@each $margin in $margins-left {
+  .margin-left-#{$margin} {
+    margin-left: #{$margin}px;
+  }
+}
+
+@each $margin in $margins-top-bottom {
+  .margin-top-bottom-#{$margin} {
+    margin: #{$margin}px 0;
+  }
+}
+
+@each $margin in $margins-left-right {
+  .margin-left-right-#{$margin} {
+    margin: 0 #{$margin}px;
+  }
+}
+
+@each $margin in $margins {
+  .margin-#{$margin} {
+    margin: #{$margin}px;
+  }
+}

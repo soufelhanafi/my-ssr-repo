@@ -1,0 +1,39 @@
+@import "src/sass/_variables.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 6px;
+  color: $white;
+  border-radius: 8px;
+  height: 52px;
+  width: 100%;
+
+  :disabled {
+    background: $gray-text;
+    border: 1px solid $gray-text;
+  }
+
+  &.button-purple {
+    border: 1px solid $primary-color;
+    background: $primary-color;
+  }
+
+  &.button-pink {
+    border: 1px solid $secondary-color;
+    background: $secondary-color;
+  }
+
+  &.button-white {
+    border: 1px solid $black;
+    background: $white;
+    color: $black;
+  }
+
+  .mat-icon {
+    scale: 0.8;
+    vertical-align: middle;
+  }
+}

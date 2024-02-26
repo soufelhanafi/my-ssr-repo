@@ -1,0 +1,121 @@
+<div class="request-offer-container">
+  <p class="request-offer-title">{{ isMobile ? "Completează formularul" : "CERE O OFERTĂ" }}</p>
+
+  <form [formGroup]="requestOfferFormGroup">
+    <app-text-input
+      placeholder="Nume și Prenume*"
+      iconName="supplier_page_facilities/supplier_page_request_offer/request_offer_user.svg"
+      formControlName="fullName"
+      [parentForm]="requestOfferFormGroup"
+      [maxLength]="30"
+    ></app-text-input>
+
+    <app-text-input
+      placeholder="Adresă de Email*"
+      iconName="supplier_page_facilities/supplier_page_request_offer/request_offer_email.svg"
+      formControlName="emailAddress"
+      [parentForm]="requestOfferFormGroup"
+      [maxLength]="50"
+    ></app-text-input>
+
+    <app-text-input
+      placeholder="Număr de Telefon*"
+      iconName="supplier_page_facilities/supplier_page_request_offer/request_offer_phone.svg"
+      formControlName="phoneNumber"
+      [parentForm]="requestOfferFormGroup"
+      [maxLength]="10"
+    ></app-text-input>
+
+    <app-select-input
+      [optionList]="optionList"
+      tipEveniment="Tipul evenimentului*"
+      formControlName="eventType"
+      [parentForm]="requestOfferFormGroup"
+    ></app-select-input>
+
+    <app-date-input
+      placeholder="Data evenimentului*"
+      iconName="supplier_page_facilities/supplier_page_request_offer/request_offer_calendar.svg"
+      formControlName="eventDate"
+      [parentForm]="requestOfferFormGroup"
+    ></app-date-input>
+
+    <app-text-input
+      [placeholder]="
+        'Număr invitați' +
+        (supplierData?.businessServiceType === 'Local' ? '*' : APP_SETTINGS.EMPTY_LINE)
+      "
+      iconName="supplier_page_facilities/supplier_page_request_offer/request_offer_people.svg"
+      formControlName="numberOfAttendees"
+      [parentForm]="requestOfferFormGroup"
+      [maxLength]="10"
+      inputPattern="[0-9]"
+    ></app-text-input>
+
+    <app-text-area
+      placeholder="Mesaj*"
+      formControlName="message"
+      [maxLength]="255"
+      [parentForm]="requestOfferFormGroup"
+    ></app-text-area>
+
+    <app-checkbox-input
+      formControlName="supplierAgreement"
+      [parentForm]="requestOfferFormGroup"
+      purpose="tos-supplier"
+    ></app-checkbox-input>
+
+    <app-checkbox-input
+      formControlName="marityAgreement"
+      purpose="tos-marity"
+      [parentForm]="requestOfferFormGroup"
+    ></app-checkbox-input>
+
+    <!-- TODO: Refactor isMobile cu !isMobile -->
+    <button
+      *ngIf="!isMobile"
+      class="button button-pink margin-top-32"
+      [disabled]="!requestOfferFormGroup.valid"
+      (click)="onSubmit()"
+      type="submit"
+    >
+      <img
+        src="/assets/icons/supplier_page_facilities/supplier_page_request_offer/request_offer_submit.svg"
+        alt=""
+      />
+      Trimite mesaj
+    </button>
+
+    <div *ngIf="isMobile" class="submit-row">
+      <div class="todays-date">
+        <p class="todays-date-name">{{ todayDay }}</p>
+        <p class="todays-date-day">{{ todayDate }}</p>
+      </div>
+
+      <button
+        class="button button-pink"
+        [disabled]="!requestOfferFormGroup.valid"
+        (click)="onSubmit()"
+        type="submit"
+      >
+        <img
+          src="/assets/icons/supplier_page_facilities/supplier_page_request_offer/request_offer_submit.svg"
+          alt=""
+        />
+        Trimite mesaj
+      </button>
+    </div>
+
+    <div *ngIf="showCongratulationsMessage" class="congratulations-message">
+      <img
+        class="congratulations-message-img"
+        src="/assets/icons/supplier_page_facilities/supplier_page_request_offer/request_offer_success.svg"
+        alt=""
+      />
+      <h1 class="congratulations-message-title">Felicitări!</h1>
+      <p class="congratulations-message-text">
+        Cererea ta este în curs de validare. Vei fi contactat de către furnizor în zilele următoare.
+      </p>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,48 @@
+<div class="main">
+  <div class="filter-zone">
+    <div
+      *ngFor="let type of supplierTypes"
+      class="filter-icon"
+      [ngClass]="{ 'filter-icon-active': type.isActive }"
+      (click)="selectSupplierType(type)"
+    >
+      <img [src]="type.iconURL" [alt]="type.label" width="22px" height="22px" />
+      <p>{{ type.label }}</p>
+    </div>
+  </div>
+  <!-- <div class="filter-zone">
+        <div class="filter-icon filter-icon-active">
+            <img src="../../../../assets/locatii-icon.svg" alt="Locatii" width="22px" height="22px">
+            <p>Locatii</p>
+        </div>
+        <div class="filter-icon">
+            <img src="../../../../assets/formatii-icon.svg" alt="Locatii" width="22px" height="22px">
+            <p>Formatii</p>
+        </div>
+        <div class="filter-icon">
+            <img src="../../../../assets/fotovide-icon.svg" alt="Locatii" width="22px" height="22px">
+            <p>Foto</p>
+        </div>
+        <div class="filter-icon">
+            <img src="../../../../assets/drinks-icon.svg" alt="Locatii" width="22px" height="22px">
+            <p>Bar</p>
+        </div>
+        <div class="filter-icon">
+            <img src="../../../../assets/flori-icon.svg" alt="Locatii" width="22px" height="22px">
+            <p>Decoratiuni</p>
+        </div>
+
+        <div class="filter-icon">
+            <img src="../../../../assets/transport-icon.svg" alt="Locatii" width="22px" height="22px">
+            <p>Transport</p>
+        </div>
+        <div class="filter-icon">
+            <img src="../../../../assets/efecte-icon.svg" alt="Locatii" width="22px" height="22px">
+            <p>Artificii</p>
+        </div>
+        <div class="filter-icon">
+            <img src="../../../../assets/entertainer-icon.svg" alt="Locatii" width="22px" height="22px">
+            <p>Entertaineri</p>
+        </div>
+    </div> -->
+</div>

@@ -1,0 +1,79 @@
+<a class="supplier-zone" [routerLink]="supplierDetails.link">
+  <div>
+    <div class="supplier-image">
+      <img
+        class="image"
+        [src]="
+          supplierDetails.imgPath
+            ? supplierDetails.imgPath
+            : '../../../../../assets/test-supplier-image.svg'
+        "
+        alt=""
+      />
+      <img
+        class="favorite-heart"
+        [src]="
+          isFavorite ? '/assets/icons/favorite_24px.svg' : '/assets/icons/favorite_icon_heart.svg'
+        "
+        (click)="clickOnFavoriteIcon($event, supplierDetails)"
+        alt=""
+      />
+      <div class="supplier-unavailable" *ngIf="supplierDetails.available === false">
+        <div class="warning-icon">
+          <mat-icon>error</mat-icon>
+        </div>
+        <div class="unavailable-text">
+          <p>
+            Aceast furnizor nu este disponibil pentru data selectată, verifică calendarul pentru a
+            vedea disponibilitatea
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="supplier-details-container">
+      <div class="name-container">
+        <div class="supplier-name">{{ supplierDetails.name }}</div>
+      </div>
+      <div class="address-container">
+        <div class="location-name">
+          <span *ngIf="supplierDetails.city">{{ supplierDetails.city }}, </span>
+          <span *ngIf="supplierDetails.county">jud.{{ supplierDetails.county }}</span>
+        </div>
+        <div *ngIf="supplierDetails.capacityMin || supplierDetails.capacityMax" class="dot-icon">
+          <img src="/assets/black-dot-icon.svg" alt="" />
+        </div>
+        <div class="capacity">
+          {{ supplierDetails.capacityMin }}
+          <span *ngIf="supplierDetails.capacityMin && supplierDetails.capacityMax">-</span>
+          {{ supplierDetails.capacityMax }}
+          <span *ngIf="supplierDetails.capacityMin || supplierDetails.capacityMax" class="persons"
+            >persoane</span
+          >
+        </div>
+      </div>
+    </div>
+    <div
+      class="free-dates"
+      *ngIf="supplierDetails.freeDates && supplierDetails.freeDates.length > 1"
+    >
+      <p>
+        Date disponibile :
+        <span *ngFor="let date of supplierDetails.freeDates | slice: 0 : 3">
+          {{ date | dateFormat }},
+        </span>
+      </p>
+    </div>
+    <div class="free-dates" *ngIf="supplierDetails.proposedDates">
+      <p>
+        Date propuse :
+        <span *ngFor="let date of supplierDetails.proposedDates"> {{ date | dateFormat }}, </span>
+      </p>
+    </div>
+  </div>
+  <div class="request-qoute" *ngIf="supplierDetails.available === false">
+    <p>Vezi calendar</p>
+  </div>
+  <div class="request-qoute" *ngIf="supplierDetails.available">
+    <p>Cere Oferta</p>
+  </div>
+</a>

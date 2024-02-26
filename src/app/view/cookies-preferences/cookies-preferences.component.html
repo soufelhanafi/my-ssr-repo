@@ -1,0 +1,40 @@
+<div class="cookies-pref-wrapper">
+  <div class="cookies-header">
+    <!-- <img (click)="onArrowClick()" class="back-arrow" src="/assets/icons/back_arrow.svg" alt="" /> -->
+    <!-- TODO: Make ArrowClick work? -->
+    <img class="back-arrow" src="/assets/icons/back_arrow.svg" alt="" />
+    <div class="cookies-pref-title">Confidențialitatea datelor tale</div>
+    <div></div>
+  </div>
+  <div class="divider"></div>
+  <div class="cookies-pref-description"
+    >Atunci când vizitezi orice site web, acesta poate stoca sau extrage informații în/din browserul
+    tău, mai ales sub formă de cookie-uri. Aceste informații pot fi despre tine, preferințele tale
+    sau dispozitivul tău și sunt utilizate în cea mai mare parte pentru a face site-ul să
+    funcționeze așa cum te aștepți. De obicei, informațiile nu te identifică în mod direct, dar îți
+    pot oferi o experiență web mai personalizată. Deoarece îți respectăm dreptul la
+    confidențialitatea datelor, poți alege să nu permiți anumite tipuri de cookie-uri. Dă clic pe
+    diferitele titluri de categorii pentru a afla mai multe și a schimba setările noastre implicite.
+    Totuși, blocarea anumitor tipuri de cookie-uri poate afecta experiența ta privind site-ul și
+    serviciile pe care le putem oferi.</div
+  >
+  <div class="cookies-pref-form">
+    <div class="form-title">Cookie-uri de performanta</div>
+    <form [formGroup]="cookieSelection" action="" class="form">
+      <ng-container *ngFor="let input of inputCookies">
+        <div class="input-container">
+          <label [for]="input.name">{{ input.text }}</label>
+          <mat-checkbox
+            [formControlName]="input.formControlName"
+            [id]="input.name"
+            [checked]="input.value"
+            [name]="input.name"
+          >
+          </mat-checkbox>
+        </div>
+      </ng-container>
+    </form>
+  </div>
+  <div class="divider"></div>
+  <button class="save-button">Salveaza</button>
+</div>

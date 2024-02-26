@@ -1,0 +1,113 @@
+@import "/src/sass/variables";
+@import "/src/sass/mixins";
+
+:host {
+  display: block;
+}
+
+.mobile {
+  .show-more {
+    max-height: 170px;
+  }
+
+  .icon-label {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .question-tick-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+.description {
+  color: $calendar-gray-text;
+}
+
+.show-more {
+  max-height: 345px;
+  -webkit-mask-image: linear-gradient(to bottom, $black 0%, transparent 100%);
+  mask-image: linear-gradient(to bottom, $black 0%, transparent 100%);
+}
+
+.show-less {
+  max-height: 100%;
+}
+
+.description-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  cursor: pointer;
+
+  span {
+    color: $--main--button-color;
+  }
+}
+
+.description-icon {
+  transform: scale(0.8);
+  vertical-align: middle;
+
+  ::ng-deep {
+    path {
+      stroke: $--main--button-color;
+    }
+  }
+}
+
+.icon-label-wrap,
+.frequent-questions-wrap {
+  margin-top: 24px;
+}
+
+.icon-label {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.icon-label-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid $request-offer-border;
+
+  .mat-icon {
+    margin-bottom: 8px;
+  }
+}
+
+.frequent-questions-wrap {
+  .title {
+    color: $button-tab-purple;
+    font-weight: bold !important;
+  }
+}
+
+.question-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 0 0;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid $request-offer-border;
+  margin-bottom: 16px;
+}
+
+.question-tick-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tick-mark {
+  @include tikmark();
+}

@@ -1,0 +1,19 @@
+<mat-form-field class="input-box" appearance="outline">
+  <div class="input-container">
+    <mat-datepicker-toggle matSuffix [for]="picker" class="datapick-toggle" [disableRipple]="true">
+      <mat-icon matDatepickerToggleIcon
+        ><img class="input-icon" [src]="'assets/icons/' + iconName" alt=""
+      /></mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <input
+      class="input-field"
+      matInput
+      [matDatepicker]="picker"
+      [placeholder]="placeholder"
+      [formControl]="formControl"
+      required
+      (click)="picker.open()"
+    />
+  </div>
+</mat-form-field>

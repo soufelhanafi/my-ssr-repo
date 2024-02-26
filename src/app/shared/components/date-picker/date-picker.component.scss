@@ -1,0 +1,207 @@
+@import "/src/sass/variables";
+
+.calendar-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $request-offer-border;
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+  @media (max-width: 1023px) {
+    height: 100%;
+  }
+
+  .offer-button {
+    display: flex;
+    height: 52px;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    width: 100%;
+    border-radius: 8px;
+    border: 0px;
+    background: $offer-button-light;
+    color: $white;
+    text-align: center;
+    font-family: "SF Pro Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+  }
+
+  ::ng-deep .mat-calendar-body-cell-container {
+    .mat-calendar-body-cell.mat-calendar-body-disabled.booked-date {
+      .mat-focus-indicator {
+        color: $--main--button-color;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 21px;
+      }
+    }
+
+    .holiday {
+      ::ng-deep .mat-calendar-body-cell-content::after {
+        content: ".";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        color: $holiday-color;
+      }
+    }
+
+    .booked-day {
+      ::ng-deep .mat-calendar-body-cell-content {
+        color: $secondary-color;
+        font-weight: bold;
+      }
+    }
+  }
+
+  ::ng-deep .mat-calendar-body-label {
+    visibility: hidden;
+  }
+  ::ng-deep .mat-calendar-body-label[colspan="7"] {
+    display: none;
+  }
+
+  ::ng-deep .mat-calendar-period-button {
+    color: $black-text;
+    font-family: "SF Pro Display";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+  }
+
+  ::ng-deep .mat-calendar-header {
+    padding: 0px;
+  }
+
+  .calendar-title {
+    color: $primary-color;
+    font-family: "SF Pro Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+  }
+}
+.submit-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 24px;
+  width: 100%;
+  border-top: 1px solid var(--Box-stroke, #e5e5ea);
+
+  .select-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $calendar-gray-text;
+    width: 50%;
+  }
+
+  .selected-date {
+    margin-right: 22px;
+    width: 50%;
+    .selected-date-name {
+      margin-bottom: 5px;
+      color: $black-text;
+      font-family: $font-family;
+      font-size: $font-size-1;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 25px;
+    }
+
+    .selected-date-day {
+      margin-bottom: 5px;
+      color: $primary-color;
+      font-family: $font-family;
+      font-size: $font-size-1;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 25px;
+    }
+  }
+
+  .submit-button {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .submit-button {
+    margin-top: 32px;
+    display: flex;
+    width: 50%;
+    height: 56px;
+    align-items: center;
+    margin: 0px;
+    gap: 6px;
+    border-radius: $--main--border-radius-button;
+    border: 1px solid $request-offer-border;
+    background: $secondary-color;
+    flex-direction: row;
+    justify-content: center;
+    color: $white;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
+    font-family: $font-family;
+    font-size: $font-size-3;
+    font-style: normal;
+    font-weight: 500;
+    line-height: $line-height-3;
+  }
+}
+.calendar-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  padding: 9px;
+
+  .day {
+    display: flex;
+    align-items: center;
+
+    &-color {
+      &-1 {
+        width: 16px;
+        height: 16px;
+        border-radius: 999px;
+        background-color: $holiday-color;
+      }
+
+      &-2 {
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
+        background-color: $black;
+      }
+
+      &-3 {
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
+        background-color: $light-pink;
+      }
+    }
+
+    .day-label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 21px;
+      margin-left: 8px;
+    }
+  }
+}

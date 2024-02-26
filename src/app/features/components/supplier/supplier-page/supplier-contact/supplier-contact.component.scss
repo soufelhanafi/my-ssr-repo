@@ -1,0 +1,114 @@
+@import "/src/sass/variables";
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  .contact-box {
+    padding: $input-padding;
+    flex: 1;
+    border-radius: $--main--border-radius;
+    border: 1px solid $request-offer-border;
+    margin: 4px;
+    max-width: 500px;
+    min-width: 260px;
+
+    .contact-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .email {
+      color: $link-color;
+      display: flex;
+    }
+
+    .icon {
+      margin-right: 8px;
+      width: $icon-width;
+      flex-shrink: 0;
+    }
+
+    .phone {
+      color: var(--succes-succes-100, #00873f);
+      border: 1px solid $succes-green;
+      padding: 6px 12px;
+      border-radius: $--main--border-radius;
+    }
+  }
+}
+
+.location-container {
+  padding: $section-padding;
+  background-color: $map-lightgray;
+  padding: $--main--border-radius;
+  margin-bottom: 12px;
+  border-radius: $--main--border-radius;
+
+  .location-description {
+    margin-bottom: $--main--border-radius-button;
+
+    img {
+      margin-right: 10px;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: $font-size-4;
+      line-height: $line-height-3;
+      color: $link-color;
+    }
+  }
+
+  .map {
+    height: 240px;
+    width: 100%;
+    border-radius: $--main--border-radius;
+  }
+}
+
+.social-container {
+  border-radius: $--main--border-radius;
+  border: 1px solid $request-offer-border;
+
+  max-width: 500px;
+  min-width: 250px;
+  display: flex;
+  padding: $input-padding;
+  margin: 10px 0px;
+
+  img {
+    margin-right: 10px;
+  }
+}
+
+.mrg-0 {
+  margin: 0;
+}
+
+.mrg-bot-25 {
+  margin-bottom: 25px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mobile {
+  .contact-container {
+    flex-direction: column;
+  }
+}

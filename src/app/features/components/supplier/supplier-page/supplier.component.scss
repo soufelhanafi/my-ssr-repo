@@ -1,0 +1,77 @@
+@import "src/sass/variables";
+
+:host {
+  display: block;
+}
+
+.hidden-container {
+  height: 0px;
+
+  .banner-calendar-wrap,
+  .event-wrap,
+  .tabs-group,
+  .tabs-content-wrap {
+    visibility: hidden;
+    position: fixed;
+  }
+
+  .supplier-calendar-mobile {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    z-index: 9999;
+    height: calc(100vh - 56px - 84px);
+    overflow: scroll;
+  }
+
+  .request-offer-mobile {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100vh - 56px - 84px);
+    overflow: scroll;
+  }
+}
+
+.desktop-view-container {
+  scroll-behavior: smooth;
+  padding: 0 16px;
+  max-width: 1209px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  .banner-calendar-wrap,
+  .event-wrap {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-column-gap: 24px;
+  }
+
+  .banner-calendar-wrap {
+    margin-top: 24px;
+  }
+
+  .tabs-content-wrap {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-column-gap: 24px;
+  }
+
+  .request-offer {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    margin: 57px 0 32px 0;
+  }
+}
+
+.mobile-view-container {
+  scroll-behavior: smooth;
+  padding: 0 12px;
+}

@@ -1,0 +1,48 @@
+@import "/src/sass/variables";
+
+:host {
+  display: block;
+}
+
+.input-box {
+  margin-bottom: $between-rows-margin;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: $--main--border-radius-button;
+  border: 1px solid $request-offer-border;
+  background: $white;
+
+  .select-field {
+    display: flex;
+    align-items: center;
+    padding: $input-padding;
+    height: 56px;
+    color: $black-text !important;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
+    font-family: $font-family;
+    font-size: $font-size-4;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $line-height-3;
+
+    ::ng-deep .mat-mdc-select-placeholder {
+      color: $black-text;
+    }
+  }
+}
+
+.option-field {
+  min-height: $line-height-3 + $input-padding;
+  color: $black-text;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-family: $font-family;
+  font-size: $font-size-4;
+  font-style: normal;
+  font-weight: 400;
+  line-height: $line-height-3;
+}

@@ -1,0 +1,195 @@
+<div *ngIf="isMobile" class="offer-page-mobile-container">
+  <div class="header">
+    <div class="title">{{ title }}</div>
+    <button (click)="closeDialog()" mat-icon-button class="close-icon">
+      <mat-icon matSuffix color="black" inline="false">close</mat-icon>
+    </button>
+  </div>
+  <h1 class="sub-title">Cerere oferta de pret</h1>
+  <div [formGroup]="askOfferForm" return false class="form">
+    <mat-form-field appearance="outline">
+      <mat-label>Mesaj</mat-label>
+      <textarea
+        matInput
+        placeholder="Mesaj"
+        formControlName="message"
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="5"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nume</mat-label>
+      <input matInput placeholder="Popescu Marian" formControlName="name" required="" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        placeholder="example@example.com"
+        pattern=".+@+.+"
+        formControlName="email"
+        required=""
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Telefon</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="0712 345 678"
+        formControlName="phone"
+        required=""
+        (keyup)="onPhoneChanged($event)"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Tipul Evenimentului</mat-label>
+      <mat-select formControlName="eventType">
+        <mat-option *ngFor="let etd of eventTypeList" [value]="etd.id">{{ etd.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field
+      appearance="outline"
+      *ngIf="dataFromSupplier.data.businessServiceType !== 'Local'"
+    >
+      <mat-label>Locatie</mat-label>
+      <input matInput placeholder="Locatie" formControlName="location" required="" />
+      <mat-icon matSuffix>place</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field (click)="openCalendar()" appearance="outline">
+      <mat-label>Alegeti data evenimentului</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date" required="" />
+      <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Numar invitati</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="Ex: 120"
+        formControlName="guestsNumber"
+        required=""
+      />
+    </mat-form-field>
+    <button
+      class="send-message"
+      type="submit"
+      mat-flat-button
+      [disabled]="!askOfferForm.valid"
+      color="#724c9b"
+      (click)="sendOffer()"
+      >Trimite mesaj</button
+    >
+  </div>
+</div>
+
+<div *ngIf="!isMobile" class="offer-page-desktop-container">
+  <div class="header">
+    <h3 class="title">Cerere Oferta</h3>
+  </div>
+  <div [formGroup]="askOfferForm" return false class="form">
+    <mat-form-field>
+      <mat-label>Nume si Prenume</mat-label>
+      <input matInput placeholder="Popescu Marian" formControlName="name" required="" />
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        placeholder="example@example.com"
+        pattern=".+@+.+"
+        formControlName="email"
+        required=""
+      />
+      <mat-icon matSuffix>mail</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Telefon</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="0712 345 678"
+        formControlName="phone"
+        required=""
+        (keyup)="onPhoneChanged($event)"
+      />
+      <mat-icon matSuffix>phone_iphone</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Tipul Evenimentului</mat-label>
+      <mat-select formControlName="eventType" [disabled]="false">
+        <mat-option *ngFor="let etd of eventTypeList" [value]="etd.id">{{ etd.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="dataFromSupplier.data.businessServiceType !== 'Local'">
+      <mat-label>Locatie</mat-label>
+      <input matInput placeholder="Locatie" formControlName="location" required="" />
+      <mat-icon matSuffix>place</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field (click)="openCalendar()">
+      <mat-label>Alegeti data evenimentului</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        formControlName="date"
+        [min]="todayDate"
+        required=""
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Numar invitati</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="Ex: 120"
+        formControlName="guestsNumber"
+        required=""
+      />
+      <mat-icon matSuffix>group</mat-icon>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Mesaj</mat-label>
+      <textarea
+        matInput
+        placeholder="Mesaj"
+        formControlName="message"
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="5"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-checkbox formControlName="agreedTerms" required=""
+      ><span class="agree-conditions"> Sunt de acord cu </span></mat-checkbox
+    ><a href="https://google.com" class="terms-and-conditions"> Termeni si Conditii</a>
+    <!-- <mat-label>Sunt de acord la marafet</mat-label> -->
+  </div>
+
+  <button
+    class="send-message-desktop"
+    type="submit"
+    [disabled]="!askOfferForm.valid"
+    (click)="sendOffer()"
+    >Trimite mesaj</button
+  >
+</div>

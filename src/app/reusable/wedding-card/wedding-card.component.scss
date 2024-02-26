@@ -1,0 +1,57 @@
+@import "src/sass/_variables";
+
+.wedding-zone {
+  margin-bottom: 12px;
+}
+
+.wedding-image {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.wedding-detail-zone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 327px;
+}
+
+.wedding-text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  width: 100%;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3px;
+  }
+}
+
+.wedding-detail {
+  color: $gray-text;
+}
+
+.wedding-address {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+}
+
+.wedding-name {
+  margin-top: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #000000;
+}

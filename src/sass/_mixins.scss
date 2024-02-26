@@ -1,0 +1,76 @@
+@mixin carousel-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: space-between;
+  // align-items: center;
+  overflow: auto;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  // > * {
+  //   margin: 8px;
+  // }
+}
+
+//Supplier page mixins
+
+@mixin title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+@mixin faq {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@mixin tikmark {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 0 11px 0 3px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 50%;
+    width: 2px;
+    background-color: #34c759;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+  }
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #34c759;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+  }
+}
+
+@mixin desktop-pink-button {
+  cursor: pointer;
+  text-align: center;
+  background: #d94a8c;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+  border-radius: 32px;
+  padding: 9px 16px;
+  width: fit-content;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+}

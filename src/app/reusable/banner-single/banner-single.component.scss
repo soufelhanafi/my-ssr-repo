@@ -1,0 +1,123 @@
+@import "src/sass/styles";
+
+.supplier-zone {
+  display: flex;
+  flex-direction: column;
+  width: 216px;
+
+  .supplier-image {
+    border-radius: 22px;
+    overflow: hidden;
+    width: 216px;
+    height: 162px;
+    position: relative;
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @media (max-width: 505px) {
+        width: 216px;
+        height: 162px;
+      }
+    }
+
+    .favorite-heart {
+      cursor: pointer;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+    }
+  }
+
+  .supplier-details-container {
+    .name-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+
+      .supplier-name {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    .address-container {
+      white-space: nowrap;
+      display: flex;
+      gap: 8px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+
+      .location-name {
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.supplier-unavailable {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  background-color: #ead8ff;
+  border: 1px solid #724c9b;
+  border-radius: 6px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 16px;
+  color: #584073;
+
+  mat-icon {
+    margin-right: 16px;
+  }
+
+  p {
+    float: right;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.free-dates {
+  span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #584073;
+  }
+}
+
+.request-qoute {
+  background: #724c9b;
+  border-radius: 8px;
+  margin-top: 12px;
+  // margin-bottom: 12px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  padding: 15px;
+
+  p {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+  }
+}

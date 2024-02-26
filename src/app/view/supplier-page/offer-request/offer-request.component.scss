@@ -1,0 +1,91 @@
+@import "/src/sass/mixins";
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.offer-page-mobile-container {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    .title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    .close-icon {
+      width: 32px;
+      height: 32px;
+      color: black;
+      background: white;
+      border-radius: 50%;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  .sub-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 8px;
+  }
+
+  .form {
+    mat-form-field {
+      width: 100%;
+    }
+
+    .send-message {
+      width: 100%;
+      background-color: #724c9b;
+      padding: 8px;
+      color: white;
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.offer-page-desktop-container {
+  border-radius: 16px;
+  padding: 16px 16px 24px;
+  background-color: #f2f2f2;
+
+  .header {
+    margin: auto;
+    text-align: center;
+
+    .title {
+      margin: 0;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  .form {
+    width: 100%;
+
+    mat-form-field {
+      width: inherit;
+    }
+  }
+
+  .send-message-desktop {
+    margin-top: 36px;
+
+    @include desktop-pink-button();
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}

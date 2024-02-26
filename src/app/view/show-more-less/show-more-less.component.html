@@ -1,0 +1,17 @@
+<ng-container *ngIf="text">
+  <span *ngIf="text.length <= wordLimit" [innerText]="text"></span>
+
+  <span *ngIf="text.length > wordLimit && !showMore"> {{ text.substring(0, wordLimit) }} ... </span>
+  <div class="button" *ngIf="text.length > wordLimit && !showMore" (click)="showMore = true"
+    >Arata mai mult
+  </div>
+
+  <div *ngIf="text.length > wordLimit && showMore" [innerText]="text"> </div>
+  <div class="button" *ngIf="text.length > wordLimit && showMore" (click)="showLessContent()"
+    >Arata mai putin</div
+  >
+</ng-container>
+
+<!-- <div *ngIf="faqPreview?.length" class="button" mat-button (click)="showAllContent()">
+    <span *ngIf="showAll"> Vezi mai putin</span><span *ngIf="!showAll"> Vezi mai multe</span>
+</div> -->

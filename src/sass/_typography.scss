@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Sf Pro Display";
+  src:
+    url("/assets/fonts/SFProDisplay-Regular.ttf") format("truetype"),
+    url("/assets/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Sf Pro Display";
+  src: url("/assets/fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+  font-weight: 500;
+}
+
+body {
+  //   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Sf Pro Display", sans-serif;
+  letter-spacing: normal;
+  overflow-y: overlay;
+}
+
+// @mixin heading-1 {
+//   font-size: $font-size-0 !important;
+//   line-height: $line-height-0 !important;
+//   font-weight: 500 !important;
+// }
+
+// .heading-1 {
+//   @include heading-1;
+// }
+
+@mixin heading-2 {
+  font-size: $font-size-1 !important;
+  line-height: $line-height-1 !important;
+  font-weight: 500 !important;
+}
+
+.heading-2 {
+  @include heading-2;
+}
+
+@mixin heading-3 {
+  font-size: $font-size-3 !important;
+  line-height: $line-height-3 !important;
+  font-weight: 500 !important;
+}
+
+.heading-3 {
+  @include heading-3;
+}
+
+@mixin heading-4 {
+  font-size: $font-size-4 !important;
+  line-height: $line-height-4 !important;
+  font-weight: 500 !important;
+}
+
+.heading-4 {
+  @include heading-4;
+}
+
+.small {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}

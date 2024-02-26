@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+.custom-dialog-container .mat-mdc-dialog-container {
+  padding: 0;
+  max-width: 70%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #fbfbfb;
+  user-select: none;
+}
+
+:root {
+  --main--background-color: #584073;
+  --main--background-color-mobile: #e5e5e5;
+  --main--button-color: #d94a8c;
+  --main--border-radius: 16px;
+  --main--border-radius-button: 8px;
+  --main--mobile-margin-lateral: 0px 24px 0px 24px;
+  --main--mobile-margin-top-bot: 24px 0px 24px 0px;
+}

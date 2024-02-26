@@ -1,0 +1,71 @@
+@import "src/sass/styles";
+
+.close-icon {
+  width: 32px;
+  height: 32px;
+  color: black;
+  background: white;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 16px;
+  position: absolute;
+  top: 16px;
+  left: 24px;
+}
+
+.filter-dialog {
+  overflow-x: hidden;
+  height: 100%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+
+    .heading-3 {
+      align-self: center;
+      width: 80%;
+      text-align: center;
+      height: 55px;
+      padding: 15px;
+      font-weight: 700 !important;
+    }
+  }
+
+  &__section {
+    margin: 24px 0;
+
+    @include media-breakpoint-up(md) {
+      .heading-2 {
+        @include heading-4;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block;
+    // width: 250px;
+  }
+
+  &__form {
+    &.mobile {
+      margin-top: 32px;
+    }
+    margin-bottom: 100px;
+    // height: calc( 100% - 150px);
+    overflow-x: hidden;
+  }
+  .bottom-buttons {
+    border: none;
+    background-color: white;
+  }
+}

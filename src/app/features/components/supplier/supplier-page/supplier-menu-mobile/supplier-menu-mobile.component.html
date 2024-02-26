@@ -1,0 +1,10 @@
+<div [ngClass]="{ 'menu-mobile-active-figure': activeFigure, 'event-menu-mobile': !activeFigure }">
+  <button class="button button-white" (click)="setComponentMobileActivePopupName('Calendar')">
+    <mat-icon [svgIcon]="'calendar-black'"></mat-icon>
+    Vezi calendar
+  </button>
+
+  <button class="button button-pink" (click)="setComponentMobileActivePopupName('Cere o oferta')">
+    Cere ofertă
+  </button>
+</div>

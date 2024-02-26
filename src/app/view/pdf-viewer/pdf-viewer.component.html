@@ -1,0 +1,722 @@
+<div *ngIf="!isMobile" class="pdf-wrapper">
+  <embed
+    *ngIf="isCookie"
+    src="/../../assets/files/politica_cookie.pdf"
+    width="100%"
+    height="100%"
+  />
+  <embed
+    *ngIf="!isCookie"
+    src="/../../assets/files/politica_confidentialitate.pdf"
+    width="100%"
+    height="100%"
+  />
+</div>
+
+<ng-container *ngIf="isMobile">
+  <div class="wrapper" *ngIf="isCookie; else isNotCookie">
+    <strong>Politica fisierelor de tip cookie si tehnologii similare</strong>
+    <br /><br />
+    Ce sunt fișierele de tip "cookies"? Fișierele de tip "cookies" sunt mici fișiere care conțin
+    litere și cifre și pot fi plasate pe dispozitivul dvs. când vizitați un website sau utilizați o
+    aplicație. Le folosim pentru a îmbunătăți experiența dvs. cu Serviciile noastre, reținând
+    preferințele dvs. Aceasta este o modalitate de a reține preferințele dvs. Fără "cookies",
+    experiența cu Serviciile noastre ar fi mai puțin prietenoasă. Motive pentru care utilizăm
+    "cookies":
+    <br /><br />
+    Le folosim pentru gestionarea preferințelor, securitate, analize și afișarea anunțurilor
+    relevante. Acestea ne ajută să vă oferim o experiență mai bună în calitate de utilizator.
+    <br /><br />
+    Folosim "cookies" pentru:
+    <br /><br />
+    1. Gestionarea preferințelor și îmbunătățirea funcționalităților.
+    <br /><br />
+    2. Sprijinirea securității și detectarea activităților frauduloase.
+    <br /><br />
+    3. Analizarea utilizării Serviciilor noastre pentru îmbunătățirea lor.
+    <br /><br />
+    4. Transmiterea de mesaje publicitare relevante.
+    <br /><br />
+    Tipuri de "cookies" și tehnologii:
+    <br /><br />
+    • Cookie-uri de Sesiune - Un „cookie de sesiune” este un cookie valabil 24 de ore de la o
+    inceperea unei sesiuni neinregistrate.
+    <br /><br />
+    • Cookie-uri Persistente - Un „cookie persistent” este un cookie care rămâne stocat în
+    terminalul utilizatorului până când atinge o anumită dată de expirare (care poate fi în câteva
+    minute, zile sau câțiva ani în viitor).
+    <br /><br />
+    Mai multe informații sunt disponibile la www.allaboutcookies.org.
+    <br /><br />
+    Cum puteți gestiona "cookies"? În setările browserului dvs., puteți șterge, dezactiva sau bloca
+    "cookies".
+    <br /><br />
+    Aveți control asupra plugin-urilor sau dispozitivelor terțelor părți conectate la serverele
+    acestora. Vă rugăm să țineți cont că refuzul "cookies" va conduce la limitarea accesului la
+    Marity.
+    <br /><br />
+    Ce puteți face pentru a șterge, dezactiva sau bloca "cookies"? În cadrul Serviciilor noastre,
+    puteți administra permisiunile fisierelor de tip cookie. Când accesați funcția de administrator
+    a preferințelor, puteți aproba si respinge tipurile de cookie disponibile. În cazul în care
+    ștergeți fisierul "cookie", setările dumneavoastra vor fi pierdute.
+    <br /><br />
+    Dacă doriți să dezactivați "cookies", browserul vă poate furniza informații despre cum să faceți
+    acest lucru
+    <br /><br />
+    Prin dezactivarea cookie-urilor se înțelege blocarea/oprirea scrierii sau citirii de informații
+    în sesiunea de cookie. Dezactivarea cookie-urilor poate duce la funcționalitate defectuoasă atât
+    a site-ului www.chroot.ro cât și a altor site-uri. Orice navigator (browser) web oferă
+    posibilitatea dezactivării cookie-urilor. Pentru mai multe detalii despre cum puteți face acest
+    lucru, accesați următoarele link-uri în funcție de navigatorul pe care îl utilizați:
+    <br /><br />
+    Administrarea preferințelor de Cookie în Microsoft Edge Administrarea preferințelor de Cookie în
+    Mozilla Firefox Administrarea preferințelor de Cookie în Google Chrome Administrarea
+    preferințelor de Cookie în Safari
+  </div>
+
+  <ng-template #isNotCookie>
+    <div class="wrapper">
+      <div class="container">
+        <p>POLITICA DE CONFIDENTIALITATE</p>
+        <p
+          >Va rugam sa lecturati cu atentie politica de confidentialitate inainte de a incepe sa
+          utilizati serviciile</p
+        >
+        <p>oferite de platforma Marity.</p>
+        <p>Cuprins:</p>
+        <p>I. Cine sunem?</p>
+        <p>II. Ce date colectam legate de persoana dumneavoastra?</p>
+        <p
+          >III. Care sunt motivele pentru care prelucram datele dumneavoastra cu caracter
+          personal</p
+        >
+        <p>IV. In ce mod prelucram datele dumneavoastra?</p>
+        <p>V. Unde si cat timp pastram datele dumneavoastra?</p>
+        <p>VI. Cu cine impartasim datele dumneavoastra?</p>
+        <p>VII. Cum asiguram securitatea datelor dumneavoastra?</p>
+        <p>VIII. Drepturile dumneavoastra</p>
+        <p>IX. Autoritatea pentru protectia datelor</p>
+        <p>I. Cine suntem?</p>
+        <p
+          >Marity (in continuare “Marity”, “platforma Marity” sau “Marity.ro”) este platforma
+          disponibila la adresa</p
+        >
+        <p
+          >de internet <a href="http://www.marity.ro">www.marity.ro</a>, care este detinuta si
+          administrata de Societatea Comerciala Citizens of
+        </p>
+        <p
+          >Technology SRL (in continuare “CoT”), persoana juridica inregistrata in Romania sub codul
+          fiscal</p
+        >
+        <p
+          >45383178 , cu sediul social in Romania, Municipiul Husi, Judetul Vaslui, Str. General
+          Teleman nr. 9.
+        </p>
+        <p
+          >Marity se imparte in trei subunitati distincte, dar care comunica intre ele si
+          impartasesc date:</p
+        >
+        <p
+          >- Platforma Marity, disponibila la adresa de internet
+          <a href="http://www.marity.ro">www.marity.ro</a></p
+        >
+        <p
+          >- Aplicatia mobila Marity Business, disponibila la adresa de internet
+          <a href="http://www.marity.ro">www.marity.ro</a> si in Google</p
+        >
+        <p>Play si AppStore</p>
+        <p
+          >- Aplicatia mobila Marity 360 Planner, la adresa de internet
+          <a href="http://www.marity.ro">www.marity.ro</a> si in Google Play si</p
+        >
+        <p>AppStore</p>
+        <p>Prezenta politica de confidentialitate este aplicabila tuturor celor trei subunitati.</p>
+        <p>Putem fi contactati in orice moment la:</p>
+        <p>Adresa postala: Str. General Teleman nr. 9, Municipiul Husi, Judetul Vaslui</p>
+        <p>Telefon: +40 771 106 202</p>
+        <p>Email: contact&#64;marity.ro</p>
+        <p
+          >Societatea Comerciala Citizens of Technology SRL (in continuare “CoT”) a numit un
+          responsabil de date
+        </p>
+        <p
+          >cu caracter personal. Pentru orice întrebări sau nelămuriri legate de prezenta Politică,
+          de modul în care</p
+        >
+        <p
+          >CoT colecteaza si prelucrează datele tale sau despre drepturile tale, ne poți contacta la
+          adresa de e-mail</p
+        >
+        <p>dedicată datepersonale&#64;marity.ro sau folosind datele de contact sus amintite.</p>
+        <p>II. Ce date colectam legate de persoana dumneavoastra?</p>
+        <p>1. Date colectate urmare a unei vizite in format vizitator neinregistrat</p>
+        <p
+          >Conform Termenilor si conditiilor de utilizare ale Marity, vizita in format neinregistrat
+          se adreseaza</p
+        >
+        <p>urmatoarelor categorii de utilizatori:</p>
+        <p
+          >- Vizitatori, utilizatori neinregistrati care viziteaza adresa de internet
+          <a href="http://www.marity.ro">www.marity.ro</a> de pe orice
+        </p>
+        <p
+          >terminal fix sau mobil, conectat la internet si care indeplineste caracteristicile
+          tehnice necesare
+        </p>
+        <p>navigarii si utilizarii facilitatilor puse la dispozitie.</p>
+        <p
+          >In momentul in care vizitati <a href="http://www.marity.ro">www.marity.ro</a> este
+          posibil ca noi sa colectam urmatoarele date, in mod
+        </p>
+        <p>automat, despre dumneavoastra:</p>
+        <p>- Adresa dumneavoastra IP</p>
+        <p>- Furnizorul dumneavoastra de servicii de internet</p>
+        <p>- Tara din care accesati pagina de internet</p>
+        <p>- Regiunea si orasul din care accesati pagina de internet</p>
+        <p>- Tipul si versiunea browserului pe care il utilizati</p>
+        <p>- Geolocatia furnizata de browser</p>
+        <p>- Tipul si versiunea terminalului de pe care accesati pagina de internet</p>
+        <p>- Sistemul de operare folosit</p>
+        <p
+          >- Optiuni de accesibilitate: Fonturi utilizate, formate audio video disponibile, setari
+          privind limba
+        </p>
+        <p>utilizata</p>
+        <p
+          >Datele sunt colectate la accesarea paginii de internet
+          <a href="http://www.marity.ro">www.marity.ro</a> si stocate intr-un “cookie” la
+        </p>
+        <p
+          >apasarea butonului “Accept cookie” sau similar. Selectia “Accept cookie” sau similar este
+          valabila 24
+        </p>
+        <p
+          >de ore de la apasarea butonului, la accesarea fara inregistrare a paginii de internet. La
+          apasarea
+        </p>
+        <p
+          >butonului “Refuz cookie” sau similar sesiunea este terminata si datele nu sunt
+          colectate.</p
+        >
+        <p
+          >Colectam informatii referitoare la activitatea dumneavoastra pe
+          <a href="http://www.marity.ro">www.marity.ro</a> :</p
+        >
+        <p>- Date privind cautarile dumneavoastra si optiunile (filtrele) de cautare folosite</p>
+        <p>- Date privind paginile vizitate, ordinea vizitarii, si timpul petrecut pe acestea</p>
+        <p>- Date privind click-urile pe butoane, link-uri, bannere si altele asemenea</p>
+        <p>- Date privind timpul petrecut in sesiune</p>
+        <p
+          >- Date privind modalitatea prin care ati ajuns pe
+          <a href="http://www.marity.ro">www.marity.ro</a>
+        </p>
+        <p
+          >Fisiere de tip “cookie”: Utilizam fisierele de tip “cookie” conform Politicii fisierelor
+          de tip cookie si</p
+        >
+        <p
+          >tehnologii similare pe care va invitam sa o lecturati accesand link-ul. Puteti seta
+          browserul</p
+        >
+        <p
+          >dumneavoastra pentru a respinge orice fisier de tip cookie sau pentru a va anunta de
+          posibilitatea setarii</p
+        >
+        <p
+          >unui astfel de fisier. Va notificam asupra faptului ca neacceptarea fisierelor de tip
+          cookie face imposibila</p
+        >
+        <p>utilizarea functionalitatilor Marity.</p>
+        <p
+          >Datele minorilor: Conform Termenilor si conditiilor de utilizare, pagina de internet
+          <a href="http://www.marity.ro">www.marity.ro</a> si
+        </p>
+        <p
+          >aplicatiile mobile Marity Business si Marity 360 sunt destinate persoanelor care au
+          implinit varsta de 18</p
+        >
+        <p>ani. Nu sunt, asadar, colectate date de la persoane care nu au implinit 18 ani.</p>
+        <p>2. Date colectate urmare a unei vizite in format inregistrat</p>
+        <p
+          >Conform Termenilor si conditiilor de utilizare ale Marity, vizita in format inregistrat
+          se adreseaza
+        </p>
+        <p>urmatoarelor categorii de utilizatori:</p>
+        <p
+          >Consumator (B2C), utilizatori inregistrati care arata interes fata de prestatiile oferite
+          de Clientii Business</p
+        >
+        <p
+          >listati pe platforma Marity si care pot interactiona intre ei sau cu Clientii Business,
+          in vederea beneficierii</p
+        >
+        <p
+          >de prestatii ale acestora. Consumatorii au varsta minima de 18 ani, varsta pe care o vor
+          confirma in
+        </p>
+        <p>procesul de creare a unui Cont Consumator.</p>
+        <p
+          >Clienti business (B2B), utilizatori inregistrati, profesionisti, prestatori de servicii
+          sau furnizori care decid</p
+        >
+        <p
+          >voluntar publicarea unor informatii despre activitatea comerciala a acestora (sau
+          Listare), in scopul
+        </p>
+        <p>promovarii generale a activitatii acestora si/sau in scopul obtinerii de clienti</p>
+        <p
+          >Pe langa toate datele colectate si prevazute la punctul 1 Date colectate urmare a unei
+          vizite in format</p
+        >
+        <p
+          >vizitator neinregistrat, este posibil ca noi sa colectam urmatoarele date, in mod
+          automat, despre</p
+        >
+        <p>dumneavoastra:</p>
+        <p>- Emailul dumneavoastra</p>
+        <p>- Nume, Prenume</p>
+        <p
+          >- Numele companiei pe care doriti sa o inregistrati, numele afacerii pe care doriti sa o
+          publicati,
+        </p>
+        <p>cat si datele de identificare si de contact ale acesteia</p>
+        <p
+          >In cazul in care utilizati pentru logare un cont Google, este posibil ca noi sa colectam
+          urmatoarele date</p
+        >
+        <p>despre dumneavoastra:</p>
+        <p
+          >- numele și prenumele, adresa de email și URL-ul către fotografia dvs. de pe profilul
+          Google;</p
+        >
+        <p
+          >III. Care sunt motivele pentru care prelucram datele dumneavoastra cu caracter
+          personal?</p
+        >
+        <p
+          >Va vom informa tot timpul despre imprejurarile in care vom colecta date despre
+          dumneavoastra si scopul</p
+        >
+        <p
+          >cu care acestea sunt colectate, conform legii. Vom utiliza datele dumneavoastra in
+          urmatoarele</p
+        >
+        <p>imprejurari:</p>
+        <p>- Supravegherea activitatii tuturor categoriilor de utilizatori</p>
+        <p>- Imbunatatirea serviciilor oferite</p>
+        <p>- Imbunatatirea securitatii serviciilor oferite</p>
+        <p
+          >- Analiza datelor si intocmirea de rapoarte cu privire la activitatea utilizatorilor pe
+          platforma</p
+        >
+        <p>- Apararea drepturilor legitime ale CoT si ale platformei Marity</p>
+        <p>- Incheierea de contracte comerciale</p>
+        <p>- Conformarea cu legislatia in vigoare</p>
+        <p>IV. In ce mod prelucram datele dumneavoastra?</p>
+        <p>1. Pentru asigurarea accesului la serviciile oferite</p>
+        <p
+          >Vom colecta datele cu caracter personal pentru a va oferi posibilitatea crearii unui cont
+          in platforma</p
+        >
+        <p>Marity. Datele pe care le vom prelucra in acest sens sunt:</p>
+        <p>1.1 Consumator (B2C)</p>
+        <p>- Nume si prenume</p>
+        <p>- Email</p>
+        <p>- Varsta</p>
+        <p>- Numar de telefon</p>
+        <p>1.2 Client Business (B2B)</p>
+        <p>- Nume</p>
+        <p>- Prenume</p>
+        <p>- Numar de telefon</p>
+        <p>- Email</p>
+        <p>- Numele afacerii si datele de identificare si contact.</p>
+        <p
+          >- Numele persoanei juridice care administreaza afacerea si datele de identificare si
+          contact.</p
+        >
+        <p
+          >- Caracteristici, functionalitati, avantaje, descrieri, fotografii, conditii comerciale
+          si alte informatii</p
+        >
+        <p
+          >relevante pentru Consumatori si Vizitatori legate de afacerea ce urmeaza a fi publicata
+          in</p
+        >
+        <p>platforma.</p>
+        <p
+          >In cazul in care utilizati pentru crearea unui cont in platforma Marity un cont Google,
+          indiferent de
+        </p>
+        <p
+          >categoria de utilizator, este posibil ca noi sa colectam urmatoarele date despre
+          dumneavoastra:</p
+        >
+        <p
+          >- numele și prenumele, adresa de email și URL-ul către fotografia dvs. de pe profilul
+          Google;</p
+        >
+        <p>2. Logarea in platforma Marity si aplicatiile Marity Business si Marity 360</p>
+        <p
+          >Vom colecta datele cu caracter personal de fiecare data cand va veti loga in platforma cu
+          un cont creat in</p
+        >
+        <p>prealabil. Datele pe care le vom prelucra in acest sens sunt:</p>
+        <p>- Emailul dumneavoastra</p>
+        <p
+          >In cazul in care utilizati pentru logare un cont Google, indiferent de categoria de
+          utilizator, este posibil ca</p
+        >
+        <p>noi sa colectam urmatoarele date despre dumneavoastra:</p>
+        <p
+          >- numele și prenumele, adresa de email și URL-ul către fotografia dvs. de pe profilul
+          Google;</p
+        >
+        <p>3. Efectuarea de cumparaturi in platforma</p>
+        <p
+          >Datele cu caracter personal legate de efectuarea cumparaturilor in platforma sunt stocate
+          exclusiv de
+        </p>
+        <p
+          >procesatorul de plati acreditat de Marity pentru aceasta activitate. Procesatorul de
+          plati detine proprii</p
+        >
+        <p
+          >termeni si propriile conditii de utilizare pe care va invitam sa le lecturati accesand
+          link-ul.</p
+        >
+        <p>4. Asistenta si suport clienti</p>
+        <p
+          >Vom colecta datele cu caracter personal de fiecare data cand veti apela la serviciul
+          relatii cu clientii.</p
+        >
+        <p>Datele pe care le vom prelucra in acest sens sunt:</p>
+        <p>4.1 Consumatori (B2C)</p>
+        <p>- Nume</p>
+        <p>- Prenume</p>
+        <p>- Email</p>
+        <p>- Telefon</p>
+        <p>4.2 Clienti Business (B2B)</p>
+        <p>- Nume</p>
+        <p>- Prenume</p>
+        <p>- Email</p>
+        <p>- Telefon</p>
+        <p>- Numele afacerii listate</p>
+        <p>- Numele persoanei juridice care administreaza afacerea</p>
+        <p>5. Marketing comportamental</p>
+        <p
+          >Vom colecta datele cu caracter personal in vederea stabilirii unor comportamente ale
+          utilizatorilor pe</p
+        >
+        <p
+          >platforma si crearea de campanii promotionale in functie de acestea. Datele pe care le
+          vom prelucra in</p
+        >
+        <p>acest sens sunt:</p>
+        <p>- Date privind cautarile dumneavoastra si optiunile (filtrele) de cautare folosite</p>
+        <p>- Date privind paginile vizitate, ordinea vizitarii, si timpul petrecut pe acestea</p>
+        <p>- Date privind click-urile pe butoane, link-uri, bannere si altele asemenea</p>
+        <p>- Date privind timpul petrecut in sesiune</p>
+        <p
+          >- Date privind modalitatea prin care ati ajuns pe
+          <a href="http://www.marity.ro">www.marity.ro</a>
+        </p>
+        <p>6. Audienta si relevanta</p>
+        <p
+          >Vom colecta datele cu caracter personal in vederea demonstrarii audientei paginilor
+          platformei si</p
+        >
+        <p>aplicatiilor mobile. Datele pe care le vom prelucra in acest sens sunt:</p>
+        <p>- Adresa dumneavoastra IP</p>
+        <p>- Furnizorul dumneavoastra de servicii de internet</p>
+        <p>- Tara din care accesati pagina de internet</p>
+        <p>- Regiunea si orasul din care accesati pagina de internet</p>
+        <p>- Tipul si versiunea browserului pe care il utilizati</p>
+        <p>- Geolocatia furnizata de browser</p>
+        <p>- Tipul si versiunea terminalului de pe care accesati pagina de internet</p>
+        <p>- Sistemul de operare folosit</p>
+        <p>7. Imbunatatirea calitatii si experientei in legatura cu serviciile oferite</p>
+        <p
+          >Vom colecta datele cu caracter personal in vederea imbunatatirii calitatii serviciilor
+          oferite si a
+        </p>
+        <p
+          >experientei in platforma si aplicatiile mobile. Imbunatatirea calitatii serviciilor
+          oferite se poate referi la:</p
+        >
+        <p
+          >- Continut personalizat in functie de relevanta activitatii in platforma si aplicatiile
+          mobile</p
+        >
+        <p>- Stabilirea modalitatii de navigare si crearea de sugestii de imbunatatire</p>
+        <p>- Colectarea de feedback anonim si recunoscut</p>
+        <p>- Masurarea nivelului de satisfactie al utilizatorilor</p>
+        <p>Datele pe care le vom prelucra in acest sens sunt:</p>
+        <p>- Toate datele mentionate la punctul II</p>
+        <p>8. Crearea de sugestii altor utilizatori din platforma</p>
+        <p
+          >Colectam imaginile si piesele scrise furnizate de dumneavoastra in vederea crearii de
+          sugestii pentru alti</p
+        >
+        <p
+          >utilizatori din platforma, cu scopul imbunatatirii experientei acestora in platforma si
+          aplicatiile mobile.</p
+        >
+        <p>Datele pe care le vom prelucra in acest sens sunt:</p>
+        <p>- Fotografii publicate</p>
+        <p>- Calendar de evenimente</p>
+        <p>- Informatii despre campaniile promotionale pe care afacerea listata le desfasoara</p>
+        <p>V. Unde si cat timp pastram datele dumneavoastra?</p>
+        <p
+          >Marity prelucrează datele dumneavoastra pentru perioada necesară îndeplinirii scopurilor
+          pentru care
+        </p>
+        <p
+          >acestea au fost colectate și conform politicilor noastre de retenție a datelor personale.
+          Cu exceptia unor</p
+        >
+        <p
+          >prevederi legale, care sa ne oblige la pastrarea datelor pentru o anumita perioada de
+          timp definita, vom</p
+        >
+        <p>pastra datele dumneavoastra dupa cum urmeaza:</p>
+        <p
+          >- Datele colectate intr-o sesiune neinregistrata: 24 de ore, prin stergerea fisierului
+          cookie</p
+        >
+        <p
+          >- Datele colectate intr-o sesiune inregistrata: Pana la stergerea definitiva a contului
+          si solicitarea</p
+        >
+        <p>expresa de stergere a datelor.</p>
+        <p
+          >Dacă va veti dezactiva contul de client și veti solicita în mod expres ștergerea totală,
+          datele asociate</p
+        >
+        <p
+          >contului tău de client vor fi șterse sau anonimizate astfel încât să nu mai poata fi
+          identificate în sistemele</p
+        >
+        <p
+          >noastre de evidență a datelor, exceptând cazul în care suntem obligați să păstrăm datele
+          tale pentru o</p
+        >
+        <p>perioadă mai lungă, în baza legii sau interesului nostru legitim.</p>
+        <p
+          >Pentru scopurile pentru care ne-ati oferit consimțământul la prelucrarea datelor,
+          evidențiate la punctul</p
+        >
+        <p
+          >IV, vom prelucra datele dumneavoastra cu privire la respectivul scop până când va veti
+          retrage</p
+        >
+        <p
+          >consimțământul privind prelucrarea în scopul respectiv, cu excepția cazului în care
+          suntem obligați să</p
+        >
+        <p
+          >menținem aceste date pentru o perioadă mai lungă potrivit legii, pentru raportări la
+          autoritățile publice,</p
+        >
+        <p>sau pentru a ne apăra drepturile în justiție.</p>
+        <p>VI. Cu cine impartasim datele dumneavoastra?</p>
+        <p>In functie de tipul de utilizator, vom impartasi datele furnizate dupa cum urmeaza:</p>
+        <p
+          >- Vizitator (neinregistrat) – Vom impartasi datele cu afacerile a caror pagini le veti
+          vizita de-a
+        </p>
+        <p
+          >lungul unei sesiuni neinregistrate. De asemenea, vom utiliza datele furnizate la crearea
+          de</p
+        >
+        <p>statistici si rapoarte cu privire la traficul pe platforma si fluxul de click-uri</p>
+        <p
+          >- Consumator (inregistrat) Vom impartasi datele cu afacerile a caror pagini le veti
+          vizita de-a</p
+        >
+        <p
+          >lungul unei sesiuni inregistrate. De asemenea, vom impartasi cu clientii business date
+          despre</p
+        >
+        <p
+          >fluxul de click-uri, timpul petrecut pe pagini, activitatea si preferintele utilizate,
+          filtrele de
+        </p>
+        <p>cautare, interesele declarate.</p>
+        <p
+          >- Client business (inregistrat) Vom impartasi datele furnizate cu vizitatorii si
+          consumatorii, in</p
+        >
+        <p
+          >masura in care aceasta activitate va conduce la cresterea interactiunii intre
+          utilizatori</p
+        >
+        <p>De asemenea, pentru toate categoriile de utilizatori, vom impartasi datele cu:</p>
+        <p>- Furnizorul/furnizorii de servicii de stocare tip “cloud”</p>
+        <p
+          >- Procesatorul/procesatorii de servicii de plati autorizati sa intermedieze plati pe
+          platforma si in
+        </p>
+        <p>aplicatiile mobile</p>
+        <p
+          >- Agentiei/agentiilor de publicitate autorizate de noi pentru segmentarea si profilarea
+          clientilor si
+        </p>
+        <p>utilizatorilor, in vederea construirii campaniilor de marketing.</p>
+        <p>VII. Cum asiguram securitatea datelor dumneavoastra?</p>
+        <p
+          >CoT depune eforturi sustinute in vederea asigurarii unui nivel de securitate optim pentru
+          datele</p
+        >
+        <p
+          >colectate de la utilizatorii Marity. În plus, depunem toate eforturile rezonabile pentru
+          a ne asigura
+        </p>
+        <p
+          >(inclusiv prin contractele încheiate cu aceștia) că și parteneri noștri de încredere
+          gestionează măsuri</p
+        >
+        <p
+          >tehnice și organizatorice adecvate pentru prelucrarea datelor pe care le împărtășim cu
+          aceștia.</p
+        >
+        <p>VIII. Care sunt drepturile dumneavoastra?</p>
+        <p
+          >Dreptul de a solicita acces la datele dumneavoastră cu caracter personal (denumit în mod
+          obișnuit</p
+        >
+        <p
+          >“solicitarea de acces a persoanei vizate”). Acesta vă dă posibilitatea de a primi o copie
+          a datelor cu</p
+        >
+        <p
+          >caracter personal deținute de noi referitoare la persoana dvs. și de a verifica dacă
+          prelucrarea este
+        </p>
+        <p>efectuată de noi în mod legal.</p>
+        <p
+          >Dreptul de a solicita rectificarea datelor pe care le deținem referitoare la persoana
+          dvs. Acesta vă dă</p
+        >
+        <p
+          >posibilitatea de a obține rectificarea oricăror date incomplete sau inexacte deținute de
+          noi referitoare la</p
+        >
+        <p
+          >persoana dvs., deși este posibil să fie necesară o verificare a corectitudinii noilor
+          date pe care ni le</p
+        >
+        <p>furnizați.</p>
+        <p
+          >Dreptul de a solicita restricționarea prelucrării datelor dumneavoastră cu caracter
+          personal. Acesta vă</p
+        >
+        <p
+          >dă posibilitatea de a ne solicita suspendarea prelucrării datelor dumneavoastră cu
+          caracter personal în</p
+        >
+        <p>următoarele situații:</p>
+        <p>(a) în cazul în care doriți să stabiliți corectitudinea datelor;</p>
+        <p>(b) în situația în care considerați că utilizarea datelor de către noi este nelegală;</p>
+        <p
+          >(c) în situația în care ne solicitați să păstrăm datele chiar dacă noi nu mai avem nevoie
+          de acestea în</p
+        >
+        <p>vederea constatării, exercitării sau apărării unui drept în justiție; sau</p>
+        <p
+          >(d) în situația în care v-ați opus utilizării de către noi a datelor dvs. însă noi
+          trebuie să verificăm dacă</p
+        >
+        <p>avem temeiuri legitime prevalente pentru utilizarea acestora.</p>
+        <p
+          >Dreptul de a solicita ștergerea datelor dumneavoastră cu caracter personal .Acesta vă dă
+          posibilitatea</p
+        >
+        <p
+          >de a ne solicita ștergerea sau eliminarea datelor cu caracter personal în cazul în care
+          nu există temeiuri</p
+        >
+        <p
+          >justificate pentru prelucrarea în continuare de către noi a acestora. Beneficiați de
+          asemenea de dreptul</p
+        >
+        <p
+          >de a ne solicita ștergerea sau eliminarea datelor dumneavoastră cu caracter personal în
+          cazul în care v-ați</p
+        >
+        <p
+          >exercitat cu succes dreptul de a vă opune prelucrării (a se vedea mai jos), în care este
+          posibil să fi</p
+        >
+        <p
+          >procesat informațiile privind persoana dvs. în mod ilegal sau în care ni se impune
+          ștergerea datelor
+        </p>
+        <p
+          >dumneavoastră cu caracter personal pentru a ne conforma cu legislația locală. Vă rugăm să
+          aveți în
+        </p>
+        <p
+          >vedere faptul că, în legătură cu anumite scopuri, este posibil să fim obligați prin lege
+          să reținem datele</p
+        >
+        <p>dvs..</p>
+        <p
+          >Dreptul de a vă opune prelucrării datelor dumneavoastră cu caracter personal în momentul
+          în care noi
+        </p>
+        <p
+          >ne prevalăm de un interes legitim (sau de interese legitime ale unui terț) și există
+          anumite elemente
+        </p>
+        <p
+          >referitoare la situația dvs. particulară care vă determină să doriți să vă opuneți
+          prelucrării în baza acestui</p
+        >
+        <p
+          >temei deoarece considerați că aceasta are impact asupra drepturilor și libertăților dvs.
+          fundamentale. În</p
+        >
+        <p
+          >unele cazuri, este posibil să demonstrăm că avem temeiuri legale convingătoare pentru
+          prelucrarea</p
+        >
+        <p
+          >informațiilor privind persoana dvs. care prevalează asupra drepturilor și libertăților
+          dvs. Beneficiați de</p
+        >
+        <p
+          >asemenea de dreptul de a vă opune în cazul în care prelucrarea datelor dumneavoastră cu
+          caracter</p
+        >
+        <p
+          >personal se efectuează în scopuri de marketing direct. Vă puteți exercita dreptul de a vă
+          opune în
+        </p>
+        <p
+          >următoarele modalități, în funcție de activitatea de prelucrare pe care doriți să o
+          încetăm.</p
+        >
+        <p>IX. Autoritatea pentru protectia datelor</p>
+        <p
+          >În ceea ce privește plângerile referitoare la protecția datelor, puteți contacta
+          Autoritatea responsabilă de</p
+        >
+        <p
+          >Protecția Datelor. Vă puteți exercita acest drept contactând autoritatea de la domiciliul
+          sau de la locul</p
+        >
+        <p>dvs. de muncă ori de la adresa operatorului de date.</p>
+        <p
+          >În ceea ce privește România, Autoritatea competentă pentru Protecția Datelor este:
+          Autoritatea</p
+        >
+        <p
+          >Națională pentru Protecția Datelor, cu sediul în: b-dul. Magheru, nr. 28-30, sector 1,
+          București, website:</p
+        >
+        <p>http://www.dataprotection.ro/</p>
+      </div>
+    </div>
+  </ng-template>
+</ng-container>

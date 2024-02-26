@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "name": "Gabriela & Paul",
+      "location": "Villa Gelsomino Exclusiv House",
+      "town": "Vaslui",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "date": "12 Aug. 2021",
+      "link": "/destinations/bali"
+    },
+    {
+      "name": "Valeria & Ionut",
+      "location": "Monato Events",
+      "town": "Bucuresti",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "date": "27 Aug. 2021",
+      "link": "/destinations/bali"
+    },
+    {
+      "name": "Alecsa & Bogdan",
+      "location": "Ballroom Events",
+      "town": "Galati",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "date": "13 Aug. 2021",
+      "link": "/destinations/bali"
+    }
+  ]
+}

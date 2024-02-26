@@ -1,0 +1,132 @@
+@import "src/sass/styles";
+
+:host {
+  cursor: pointer;
+
+  p {
+    margin: 0;
+  }
+}
+
+.supplier-zone {
+  display: flex;
+  flex-direction: column;
+  max-width: 216px;
+  height: 100%;
+  justify-content: space-between;
+
+  .supplier-image {
+    border-radius: 22px;
+    overflow: hidden;
+    min-width: 216px;
+    height: 162px;
+    position: relative;
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .favorite-heart {
+      cursor: pointer;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+    }
+
+    @media (max-width: 505px) {
+      width: 327px;
+      height: 245px;
+    }
+  }
+
+  .supplier-details-container {
+    // padding: 0 4px;
+
+    .name-container {
+      margin-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+
+      .supplier-name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+
+    .address-container {
+      white-space: nowrap;
+      display: flex;
+      gap: 8px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+
+      .location-name {
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+
+  @media (max-width: 505px) {
+    max-width: 100%;
+  }
+}
+
+.supplier-unavailable {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #ead8ff;
+  padding: 16px 16px 8px;
+  color: #584073;
+
+  mat-icon {
+    margin-right: 4px;
+  }
+
+  p {
+    float: right;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.free-dates {
+  span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #584073;
+  }
+}
+
+.request-qoute {
+  background: #724c9b;
+  border-radius: 8px;
+  margin-top: 12px;
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  padding: 15px;
+
+  p {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="component-header" *ngIf="componentMobileActivePopupName">
+  <img class="mar-logo" routerLink="/" src="/assets/icons/m_logo.svg" />
+  <div> {{ componentMobileActivePopupName }} </div>
+  <img
+    class="close-button"
+    src="assets/x-icon.svg"
+    (click)="setComponentMobileActivePopupName(emptyLine)"
+    alt=""
+  />
+</div>

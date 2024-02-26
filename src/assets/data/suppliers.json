@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "name": "Lugu Lugu",
+      "location": "Vaslui",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "capacity": "100-350 persoane",
+      "rating": 3.5,
+      "type": "Restaurant",
+      "link": "/destinations/bali"
+    },
+    {
+      "name": "Villa Gelsomino Exclusiv House",
+      "location": "Bucuresti",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "capacity": "100-350 persoane",
+      "rating": 4.8,
+      "type": "Restaurant",
+      "link": "/destinations/bali"
+    },
+    {
+      "name": "Villa Gelsomino Exclusiv House",
+      "location": "Galati",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "capacity": "200-350 persoane",
+      "rating": 4.8,
+      "type": "Restaurant",
+      "link": "/destinations/bali"
+    },
+    {
+      "name": "Lugu Lugu",
+      "location": "Vaslui",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "capacity": "100-350 persoane",
+      "rating": 3.5,
+      "type": "Restaurant",
+      "link": "/destinations/bali"
+    },
+    {
+      "name": "Villa Gelsomino Exclusiv House",
+      "location": "Bucuresti",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "capacity": "100-350 persoane",
+      "rating": 4.8,
+      "type": "Restaurant",
+      "link": "/destinations/bali"
+    },
+    {
+      "name": "Villa Gelsomino Exclusiv House",
+      "location": "Galati",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "capacity": "200-350 persoane",
+      "rating": 4.8,
+      "type": "Restaurant",
+      "link": "/destinations/bali"
+    },
+    {
+      "name": "Lugu Lugu",
+      "location": "Vaslui",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "capacity": "100-350 persoane",
+      "rating": 3.5,
+      "type": "Restaurant",
+      "link": "/destinations/bali"
+    },
+    {
+      "name": "Villa Gelsomino Exclusiv House",
+      "location": "Bucuresti",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "capacity": "100-350 persoane",
+      "rating": 4.8,
+      "type": "Restaurant",
+      "link": "/destinations/bali"
+    },
+    {
+      "name": "Villa Gelsomino Exclusiv House",
+      "location": "Galati",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "capacity": "200-350 persoane",
+      "rating": 4.8,
+      "type": "Restaurant",
+      "link": "/destinations/bali"
+    },
+    {
+      "name": "Lugu Lugu",
+      "location": "Vaslui",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "capacity": "100-350 persoane",
+      "rating": 3.5,
+      "type": "Restaurant",
+      "link": "/destinations/bali"
+    },
+    {
+      "name": "Villa Gelsomino Exclusiv House",
+      "location": "Bucuresti",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "capacity": "100-350 persoane",
+      "rating": 4.8,
+      "type": "Restaurant",
+      "link": "/destinations/bali"
+    },
+    {
+      "name": "Villa Gelsomino Exclusiv House",
+      "location": "Galati",
+      "imgPath": "../../../../../assets/test-supplier-image.svg",
+      "capacity": "200-350 persoane",
+      "rating": 4.8,
+      "type": "Restaurant",
+      "link": "/destinations/bali"
+    }
+  ]
+}

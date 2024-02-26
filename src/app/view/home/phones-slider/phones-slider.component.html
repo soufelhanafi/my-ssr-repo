@@ -1,0 +1,7 @@
+<div class="scroll-container">
+  <div class="scroll-wrapper" [style.transform]="'translateX(' + offsetX + 'px)'">
+    <div *ngFor="let swipe of phoneFrameContentArray; index as index" class="image-container">
+      <img [src]="swipe.pictureSrc" class="image" />
+    </div>
+  </div>
+</div>

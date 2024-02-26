@@ -1,0 +1,27 @@
+<div class="calendar-wrapper">
+  <div class="header-wrapper">
+    <h1 class="title">CALENDAR</h1>
+
+    <div class="date-wrapper">
+      <div class="current-date-wrapper">
+        <span class="current-date">{{ currentMonth }}</span>
+        <mat-icon svgIcon="down-arrow"></mat-icon>
+      </div>
+
+      <div class="date-navigation">
+        <mat-icon svgIcon="left-arrow"></mat-icon>
+        <mat-icon svgIcon="right-arrow"></mat-icon>
+      </div>
+    </div>
+  </div>
+  <div class="unavailable-wrapper">
+    <mat-icon svgIcon="clock-icon"></mat-icon>
+
+    <div>
+      <h1 class="unavailable-title">Calendar indisponibil</h1>
+      <p class="unavailable-description">Momentan calendarul nu este vizibil</p>
+    </div>
+
+    <button class="button button-pink" (click)="onButtonClick()">Cere ofertă</button>
+  </div>
+</div>

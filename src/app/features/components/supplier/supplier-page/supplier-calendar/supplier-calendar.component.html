@@ -1,0 +1,12 @@
+<div *ngIf="displayCalendar" class="calendar-container">
+  <app-date-picker
+    [parentData]="supplierDatesObject"
+    (dateSelected)="onDateSelected($event)"
+    [isMobile]="isMobile"
+    class="date-picker"
+  ></app-date-picker>
+</div>
+
+<div *ngIf="!displayCalendar" class="calendar-container">
+  <app-calendar-unavailable (buttonClicked)="askForOfferClick()"></app-calendar-unavailable>
+</div>

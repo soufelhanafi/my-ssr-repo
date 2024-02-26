@@ -1,0 +1,75 @@
+@import "src/sass/styles";
+
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.search-bar {
+  padding: 4px 12px 4px 12px;
+  margin: $spacing-margin auto $spacing-margin;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e5e5ea;
+  border-radius: 48px;
+  background-color: #ffffff;
+
+  @include media-breakpoint-up(md) {
+    width: 480px;
+  }
+}
+
+.search-zone {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 85%;
+}
+
+.filter-zone {
+  cursor: pointer;
+}
+
+.icon-filter {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e5e5ea;
+  border-radius: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-search {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+  border-radius: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  opacity: 0.4;
+  margin: 0px;
+  margin-left: 10px;
+}
+
+.input-field {
+  cursor: pointer;
+}

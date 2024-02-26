@@ -1,0 +1,64 @@
+@import "/src/sass/variables";
+
+.calendar-container {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  @media (max-width: 1023px) {
+    height: calc(100% - 40px);
+    min-height: 520px;
+  }
+}
+
+.calendar-bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100px + 24px);
+
+  &-label-not-selected {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    opacity: 0.3;
+  }
+
+  &-label-selected {
+    .selected-date-label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .selected-date {
+      color: $primary-color;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &-button {
+    border-radius: 8px;
+    background: $--main--button-color;
+    color: $white;
+    font-size: 18px;
+    padding: 16px;
+    border: 0px;
+    height: 52px;
+    display: flex;
+    height: 52px;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+
+    &:disabled {
+      background-color: $request-offer-border;
+    }
+
+    &-img {
+      color: $white;
+    }
+  }
+}

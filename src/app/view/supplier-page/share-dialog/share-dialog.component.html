@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Distribuie Localul</h2>
+<mat-dialog-content>
+  <p>Copiati linkul de mai jos pentru a distribui:</p>
+  <div class="input-container">
+    <input class="input-link" #linkInput type="text" value="{{ data.link }}" readonly />
+    <button mat-icon-button (click)="copyLink(linkInput)" aria-label="Copy Link">
+      <mat-icon>content_copy</mat-icon>
+    </button>
+    <share-buttons
+      [include]="['facebook', 'whatsapp', 'email', 'sms', 'twitter', 'reddit', 'telegram']"
+    ></share-buttons>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="true">Inchide</button>
+</mat-dialog-actions>

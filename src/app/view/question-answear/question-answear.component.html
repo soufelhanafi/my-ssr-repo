@@ -1,0 +1,24 @@
+<div *ngIf="displayContents.length">
+  <div class="contents">
+    <h1 class="title-head">Întrebări? Răspunsuri.</h1>
+    <ng-container *ngFor="let content of displayContents; index as index; last as last">
+      <div class="header" (click)="showAnswearDetails(index)">
+        <h2 class="title">{{ content.question }}</h2>
+        <img
+          class="icon"
+          [src]="
+            indexExpanded === index
+              ? '/assets/images/icons/arrow_up.svg'
+              : '/assets/images/icons/arrow_down.svg'
+          "
+        />
+      </div>
+      <p
+        class="text"
+        *ngIf="indexExpanded === index ? true : null"
+        [innerHTML]="content.answear"
+      ></p>
+      <div *ngIf="!last" class="separator-line"></div>
+    </ng-container>
+  </div>
+</div>

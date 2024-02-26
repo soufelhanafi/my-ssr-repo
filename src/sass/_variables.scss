@@ -1,0 +1,77 @@
+//widths
+$max-width-for-mobile: 768px;
+$max-width-for-suppliers: 968px;
+$max-width-for-tablet: 1200px;
+
+$max-content-width: 70%;
+$max-content-width-for-tablet: 90%;
+
+// Elements widths
+$icon-width: 16px;
+
+// Colors
+$white: #fff;
+$black: #000;
+$--main--background-color: #584073;
+$--main--background-color-mobile: #ffffff;
+$--main--button-color: #d94a8c;
+$background-color: #ffffff;
+$primary-color: #724c9b;
+$secondary-color: #d94a8c;
+$black-text: #1a1a1a;
+$request-offer-border: #e5e5ea;
+$calendar-gray-text: #919191;
+$gray-text: #8e8e93;
+$calendar-lightgray-text: #c3c3c3;
+$offer-button-light: #dbdbdb;
+$light-pink: #ff5c88;
+$black: #000;
+$link-color: #3d66d1;
+$holiday-color: #f8003f;
+$supplier-gradient: linear-gradient(108deg, #ff2c62 -56.27%, #724c9b 84.08%);
+$button-border-red: #ff2c62;
+$button-tab-purple: #7b6690;
+$header-background-dark-purple: rgba(190, 160, 255, 0.15);
+$map-lightgray: rgba(237, 237, 237, 0.5);
+$succes-green: #00873f;
+
+// Typography
+$font-size-0: 24px;
+$line-height-0: 29px;
+$font-size-1: 20px;
+$line-height-1: 28px;
+$font-size-2: 18px;
+$line-height-2: 22px;
+$font-size-3: 16px;
+$line-height-3: 21px;
+$font-size-4: 14px;
+$line-height-4: 17px;
+$font-size-5: 28px;
+$line-height-5: 36px;
+$font-family: "SF Pro Display";
+
+// Border radius
+$--main--border-radius: 16px;
+$--main--border-radius-button: 8px;
+
+// Margins
+$--main--mobile-margin-lateral: 0px 24px 0px 24px;
+$--main--mobile-margin-top-bot: 24px 0px 24px 0px;
+$spacing-margin: 24px;
+$between-rows-margin: 16px;
+
+// Paddings
+$section-padding: 24px;
+$input-padding: 12px;
+
+@mixin container-padding($breakpoint) {
+  padding: 10px 20px;
+
+  @if $breakpoint == sm {
+    padding: 10px 40px;
+  }
+
+  @if $breakpoint == md {
+    padding: 10px 80px;
+  }
+}

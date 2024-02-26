@@ -1,0 +1,22 @@
+<div class="event-section">
+  <div class="event-image">
+    <img
+      class="event-image-background"
+      *ngIf="supplierPhotos && supplierPhotos.length"
+      src="{{ supplierPhotos[0].linkSrc }}"
+      alt="{{ emptyLine }}"
+    />
+
+    <div class="event-cover" *ngIf="isMobile">
+      <img
+        src="assets/arrow-right.svg"
+        class="return-button-mobile"
+        (click)="goToLink('/')"
+        alt="{{ emptyLine }}"
+      />
+      <img class="event-icon" src="assets/event-icon-2.svg" alt="{{ emptyLine }}" />
+      <div class="title-mobile">{{ supplierAbout?.title }}</div>
+      <div class="link">Locatie</div>
+    </div>
+  </div>
+</div>

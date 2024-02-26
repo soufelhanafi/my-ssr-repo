@@ -1,0 +1,18 @@
+<nav>
+  <header class="header">
+    <div class="navigation-wrapper">
+      <img class="mar-logo" routerLink="/" src="/assets/icons/m_logo.svg" />
+      <div class="navigation-items">
+        <span
+          class="navigation-item"
+          (click)="goToLink('https://client-web-dev-kcjyq723uq-ew.a.run.app/explore')"
+          >Furnizori</span
+        >
+        <span class="navigation-item active" routerLink="/supplier">Marity</span>
+        <span class="navigation-item" (click)="goToLink(client360WebSite)">360 Planner</span>
+        <span class="navigation-item" (click)="goToLink(businessWebSite)">Business</span>
+      </div>
+      <app-burger-menu class="burger-menu"></app-burger-menu>
+    </div>
+  </header>
+</nav>

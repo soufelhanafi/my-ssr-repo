@@ -1,0 +1,25 @@
+<a class="wedding-zone" [routerLink]="weddingDetails.link">
+  <div class="wedding-image">
+    <img [src]="weddingDetails.imgPath" alt="" width="327px" height="265px" />
+  </div>
+  <div class="wedding-detail-zone">
+    <div class="wedding-text">
+      <div class="wedding-text__row">
+        <div class="heading-4">
+          <p>{{ weddingDetails.name }}</p>
+        </div>
+        <div class="wedding-detail">
+          <p>{{ weddingDetails.date }}</p>
+        </div>
+      </div>
+      <div class="wedding-text__row">
+        <div class="wedding-detail">
+          <p>{{ weddingDetails.location }}</p>
+        </div>
+        <div class="wedding-detail">
+          <p>{{ weddingDetails.town }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>

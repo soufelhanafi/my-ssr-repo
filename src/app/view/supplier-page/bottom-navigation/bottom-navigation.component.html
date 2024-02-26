@@ -1,0 +1,21 @@
+<div class="bottom-navigation-wrapper">
+  <a href="tel:{{ phone }}" class="navigation-item"
+    ><img class="icon" src="/assets/icons/supplier_page_bottom_navigation/phone.svg" alt="" /><span
+      class="item-label"
+      >Apeleaza</span
+    >
+  </a>
+  <div class="navigation-item" (click)="askOffer()"
+    ><img class="icon" src="/assets/icons/supplier_page_bottom_navigation/tag.svg" alt="" /><span
+      class="item-label"
+    ></span
+    >Cerere oferta</div
+  >
+  <div *ngIf="displayCalendar" class="navigation-item" (click)="checkCalendar()"
+    ><img
+      class="icon"
+      src="/assets/icons/supplier_page_bottom_navigation/Calendar.svg"
+      alt=""
+    /><span class="item-label"></span>Vezi calendar</div
+  >
+</div>

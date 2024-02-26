@@ -1,0 +1,16 @@
+.location-type,
+.facilities {
+  padding: 0;
+  margin: 12px 0 24px;
+
+  li {
+    list-style: none;
+  }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}

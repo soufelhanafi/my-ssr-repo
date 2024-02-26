@@ -1,0 +1,110 @@
+<app-supplier-component-header
+  *ngIf="componentMobileActivePopupName"
+  [componentMobileActivePopupName]="componentMobileActivePopupName"
+></app-supplier-component-header>
+
+<div
+  [ngClass]="{
+    'mobile-view-container': isMobile && !componentMobileActivePopupName,
+    'desktop-view-container': !isMobile && !componentMobileActivePopupName,
+    'hidden-container': componentMobileActivePopupName
+  }"
+>
+  <section class="event-wrap">
+    <app-supplier-event
+      [supplierPhotos]="supplierData?.mediaPhotos"
+      [supplierAbout]="supplierData?.about"
+      [supplierFacility]="supplierData?.Facility"
+      [isMobile]="isMobile"
+    ></app-supplier-event>
+
+    <div></div>
+  </section>
+
+  <section class="banner-calendar-wrap">
+    <app-supplier-event-banner
+      [supplierPhotos]="supplierData?.mediaPhotos"
+      [supplierAbout]="supplierData?.about"
+      [supplierFacility]="supplierData?.Facility"
+      [isMobile]="isMobile"
+    ></app-supplier-event-banner>
+
+    <ng-container *ngIf="!isMobile || componentMobileActivePopupName === 'Calendar'">
+      <app-supplier-calendar
+        [ngClass]="{ 'supplier-calendar': !isMobile, 'supplier-calendar-mobile': isMobile }"
+        [dateObject]="{
+          bookedDates: supplierData?.bookedDates || [],
+          holidayDates: [],
+          selectedDate: []
+        }"
+        [displayCalendar]="!!supplierData?.about?.displayCalendar"
+        [isMobile]="isMobile"
+      ></app-supplier-calendar>
+    </ng-container>
+  </section>
+
+  <ng-container
+    *ngIf="
+      isMobile &&
+      componentMobileActivePopupName !== 'Calendar' &&
+      componentMobileActivePopupName !== 'Cere o oferta'
+    "
+  >
+    <app-supplier-menu-mobile [activeFigure]="activeFigure"></app-supplier-menu-mobile>
+  </ng-container>
+
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" class="tabs-group">
+    <mat-tab [label]="SupplierTabsLabelEnum.GALLERY" #gallery></mat-tab>
+    <mat-tab [label]="SupplierTabsLabelEnum.SHOP" #shop [disabled]="true"></mat-tab>
+    <mat-tab [label]="SupplierTabsLabelEnum.ABOUT" #about></mat-tab>
+    <mat-tab [label]="SupplierTabsLabelEnum.CONTACT" #contact></mat-tab>
+    <mat-tab [label]="SupplierTabsLabelEnum.REVIEWS" #reviews></mat-tab>
+    <mat-tab [label]="SupplierTabsLabelEnum.OFFERS" #offers [disabled]="true"></mat-tab>
+    <mat-tab [label]="SupplierTabsLabelEnum.ORDERS" #orders [disabled]="true"></mat-tab>
+  </mat-tab-group>
+
+  <section class="tabs-content-wrap">
+    <app-supplier-gallery
+      *ngIf="gallery.isActive"
+      [gallery]="supplierGallery"
+    ></app-supplier-gallery>
+
+    <app-supplier-shop *ngIf="shop.isActive"></app-supplier-shop>
+
+    <app-supplier-about
+      *ngIf="about.isActive"
+      [supplierData]="supplierData"
+      [isMobile]="isMobile"
+    ></app-supplier-about>
+
+    <app-supplier-contact
+      *ngIf="contact.isActive"
+      [supplierData]="supplierData"
+    ></app-supplier-contact>
+
+    <app-supplier-reviews
+      *ngIf="reviews.isActive"
+      [isMobile]="isMobile"
+      [googleReviews]="supplierData?.googleReviews"
+      [googleRating]="supplierData?.googleRating"
+      [supplierTitle]="supplierData?.about?.title"
+    ></app-supplier-reviews>
+    <app-supplier-offers *ngIf="offers.isActive"></app-supplier-offers>
+    <app-supplier-orders *ngIf="orders.isActive"></app-supplier-orders>
+
+    <ng-container *ngIf="!isMobile || componentMobileActivePopupName === 'Cere o oferta'">
+      <app-supplier-request-offer
+        [supplierData]="supplierData"
+        [isMobile]="isMobile"
+        [ngClass]="{ 'request-offer': !isMobile, 'request-offer-mobile': isMobile }"
+      ></app-supplier-request-offer
+    ></ng-container>
+  </section>
+</div>
+
+<ng-container *ngIf="activeFigure">
+  <app-gallery-preview
+    [gallery]="supplierGallery"
+    [activeFigure]="activeFigure"
+  ></app-gallery-preview>
+</ng-container>

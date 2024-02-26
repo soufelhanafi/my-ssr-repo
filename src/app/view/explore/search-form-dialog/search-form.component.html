@@ -1,0 +1,133 @@
+<section class="filter-dialog">
+  <div class="filter-dialog__header">
+    <button mat-icon-button (click)="closeSearchForm()" class="close-icon">
+      <mat-icon matSuffix color="black" inline="false">close</mat-icon>
+    </button>
+    <div class="heading-3">Cautare</div>
+  </div>
+  <!-- <mat-divider></mat-divider> -->
+
+  <form [formGroup]="formGroup" class="filter-dialog__form">
+    <mat-stepper orientation="vertical" linear="true" #stepper>
+      <mat-step [stepControl]="formGroup" class="location-step">
+        <div [ngClass]="{ 'no-borders': isDateStepActive }">
+          <ng-template matStepLabel>
+            <span
+              class="heading-1"
+              [ngClass]="{ 'heading-1': !isDateStepActive, small: isDateStepActive }"
+              >Unde?</span
+            >
+            <span
+              *ngIf="isDateStepActive && selectedLocation.nume"
+              [ngClass]="{ 'heading-1': isDateStepActive }"
+            >
+              {{ selectedLocation.nume }}
+              <button matSuffix mat-icon-button aria-label="Clear" (click)="selectedLocation = {}">
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </span>
+          </ng-template>
+        </div>
+        <mat-form-field appearance="outline">
+          <mat-label>
+            <mat-icon matSuffix color="accent" (click)="resetInfo()" inline="true">search</mat-icon>
+            Cauta localitatea
+          </mat-label>
+          <input matInput formControlName="locationControl" autocomplete="off" />
+        </mat-form-field>
+        <div
+          class="location-suggestions"
+          *ngIf="locationSuggestions && locationSuggestions.length > 0"
+        >
+          <button
+            mat-button
+            class="location"
+            *ngFor="let location of locationSuggestions"
+            (click)="selectLocation(location)"
+            matStepperNext
+          >
+            <div class="location__icon">
+              <mat-icon> location_on</mat-icon>
+            </div>
+            <div class="location__text">
+              {{ location.diacritice ?? location.nume }} - {{ location.judet }}
+            </div>
+          </button>
+        </div>
+        <!-- <div>
+          <button mat-flat-button color="accent" matStepperNext type="button">Inainte</button>
+        </div> -->
+      </mat-step>
+      <mat-step id="dateStep" [stepControl]="formGroup">
+        <ng-template matStepLabel>
+          <span class="heading-1">Cand?</span>
+          <span *ngIf="!isDateStepActive" class="small"> Selecteaza data </span>
+          <div id="dateTypeBtnGroup" *ngIf="isDateStepActive">
+            <mat-button-toggle-group #group formControlName="dateType" color="#f2f2f2">
+              <mat-button-toggle (change)="log()" checked value="1"
+                >Data selectata</mat-button-toggle
+              >
+              <mat-button-toggle (change)="log()" value="2">Data flexibila</mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
+        </ng-template>
+        <div *ngIf="formGroup.get('dateType')?.value === 1">
+          <mat-card appearance="outlined">
+            <mat-calendar
+              [selected]="formGroup.get('fixedDateControl')?.value"
+              (selectedChange)="updateFixedDate($event)"
+            ></mat-calendar>
+          </mat-card>
+        </div>
+        <div *ngIf="formGroup.get('dateType')?.value === 2">
+          <div class="flexible-date-option">
+            <h3 class="flexible-date-option__heading">Alege anul evenimentului</h3>
+            <mat-button-toggle-group
+              #yearGroup
+              color="#f2f2f2"
+              class="carousel-container"
+              formControlName="flexibleDateYearControl"
+            >
+              <mat-button-toggle *ngFor="let year of years" [value]="year">{{
+                year
+              }}</mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
+          <!-- <mat-divider></mat-divider> -->
+          <div class="flexible-date-option">
+            <h3 class="flexible-date-option__heading">Alege luna</h3>
+            <mat-button-toggle-group
+              #monthGroup
+              color="#f2f2f2"
+              class="carousel-container"
+              formControlName="flexibleDateMonthControl"
+              multiple
+            >
+              <mat-button-toggle *ngFor="let month of months" [value]="month.value">{{
+                month.text
+              }}</mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
+          <!-- <mat-divider></mat-divider> -->
+          <div class="flexible-date-option">
+            <h3 class="flexible-date-option__heading">Alege ziua</h3>
+            <mat-button-toggle-group
+              #dayGroup
+              color="#f2f2f2"
+              class="carousel-container"
+              formControlName="flexibleDateDayControl"
+            >
+              <mat-button-toggle *ngFor="let day of days" [value]="day.value">{{
+                day.text
+              }}</mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </form>
+  <div class="bottom-buttons">
+    <button mat-button (click)="resetInfo()">Sterge</button>
+    <button mat-flat-button color="accent" (click)="fetchResults()">Vezi toate rezultatele</button>
+  </div>
+</section>

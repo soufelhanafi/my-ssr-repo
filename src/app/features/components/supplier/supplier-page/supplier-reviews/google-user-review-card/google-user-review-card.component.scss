@@ -1,0 +1,83 @@
+@import "/src/sass/variables";
+
+.google-reviews-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+
+  &.mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  flex: 1 0 0%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  min-width: 0;
+  word-wrap: break-word;
+  border-radius: 12px;
+  border: 1px solid $request-offer-border;
+  height: 100%;
+}
+
+.header {
+  text-align: center;
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.user-name {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  text-align: center;
+
+  .small {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    /* width: 250px; */
+    overflow: hidden;
+    padding: 0 12px;
+    line-height: 18px;
+  }
+}
+
+.footer {
+  display: grid;
+  justify-items: center;
+}
+
+.date-wrap {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.date {
+  margin: 0 5px 0 0;
+  color: $calendar-gray-text;
+
+  img {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    margin: 0px;
+  }
+}

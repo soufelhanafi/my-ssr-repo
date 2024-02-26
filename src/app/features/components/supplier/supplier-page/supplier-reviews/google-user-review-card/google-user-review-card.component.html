@@ -1,0 +1,34 @@
+<div
+  class="google-reviews-list"
+  *ngIf="googleReviews?.length"
+  [ngClass]="isMobile ? 'mobile' : APP_SETTINGS.EMPTY_LINE"
+>
+  <ng-container *ngFor="let googleReview of googleReviews">
+    <div class="card">
+      <div class="header">
+        <img class="user-img" [src]="googleReview.authorAttribution.photoUri" alt="image" />
+        <p class="user-name" (click)="navigateTo(googleReview.authorAttribution.uri)">{{
+          googleReview.authorAttribution.displayName
+        }}</p>
+      </div>
+
+      <div class="body">
+        <p class="small">{{ googleReview.text.text }}</p>
+      </div>
+
+      <div class="footer">
+        <app-supplier-rating-box
+          [ratingValue]="googleReview.rating"
+          [starWidth]="'24px'"
+          [ratingDisplay]="false"
+        ></app-supplier-rating-box>
+
+        <div class="date-wrap">
+          <p class="date">{{ googleReview.relativePublishTimeDescription }}</p>
+
+          <img src="../../../../../../../assets/icons/google_icon.svg" alt="google_icon" />
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

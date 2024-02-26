@@ -1,0 +1,44 @@
+@import "/src/sass/variables";
+
+:host {
+  display: block;
+}
+
+.text-area-box {
+  margin-bottom: $between-rows-margin;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: $--main--border-radius-button;
+  border: 1px solid $request-offer-border;
+  background: $white;
+
+  .text-area-container {
+    width: 100%;
+    height: 105px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .text-area-field {
+      padding: $input-padding;
+      width: 100%;
+      height: 100%;
+      flex: 1 0 0;
+      color: $black-text;
+      font-feature-settings:
+        "clig" off,
+        "liga" off;
+      font-family: $font-family;
+      font-size: $font-size-4;
+      font-style: normal;
+      font-weight: 400;
+      line-height: $line-height-3;
+      resize: none;
+    }
+  }
+}
+
+.mat-mdc-form-field-infix {
+  display: flex;
+}

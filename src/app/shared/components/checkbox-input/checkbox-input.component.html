@@ -1,0 +1,16 @@
+<div class="checkbox-box" appearance="outline">
+  <div class="checkbox-container">
+    <mat-checkbox class="checkbox-field" [formControl]="formControl">
+      <ng-container *ngIf="purpose === 'tos-marity'; else supplierText">
+        <span>
+          Sunt de acord cu
+          <a class="tos-link" href="">politica de confidențialitate Marity.</a>
+        </span>
+      </ng-container>
+    </mat-checkbox>
+  </div>
+</div>
+
+<ng-template #supplierText>
+  Sunt de acord cu <a class="tos-link" href="">termenii și condițiile furnizorului</a> contractat.
+</ng-template>

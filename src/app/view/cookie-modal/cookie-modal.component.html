@@ -1,0 +1,22 @@
+<div class="modal-wrapper">
+  <div class="title-container">
+    <div class="title">Confidențialitatea datelor tale</div
+    ><img src="../../../assets/icons/lock_icon_cookie_modal.svg" alt="" />
+  </div>
+  <div class="description"
+    >Utilizăm module cookie și tehnologii similare care ne ajută să personalizăm conținutul, să
+    adaptăm și să măsurăm eficacitatea reclamelor, astfel încât să oferim o experiență mai bună.
+    Dacă dai clic pe OK sau activezi o opțiune în Preferințe privind modulele cookie, ești de acord
+    cu utilizarea acestora, după cum se arată în Politica noastră privind modulele cookie. Pentru a
+    modifica preferințele sau a-ți retrage consimțământul, te rugăm să actualizezi Preferințe
+    privind modulele cookie.
+    <div (click)="openCookie()" style="cursor: pointer"><strong>Vezi Politica Cookie</strong></div>
+  </div>
+  <div class="buttons-container"
+    ><button class="nec-cook" [mat-dialog-close]="{ essentialCookiesAccepted: true }"
+      >Accepta cookie-uri esentiale</button
+    ><button class="all-cook" [mat-dialog-close]="{ allCookiesAccepted: true }"
+      >Accepta tot</button
+    ></div
+  >
+</div>

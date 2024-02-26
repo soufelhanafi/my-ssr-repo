@@ -1,0 +1,409 @@
+<div class="adminMode" *ngIf="adminMode">
+  <h1>Pagină temporară</h1>
+  <p>Evaluează pagina cu atentie!!</p>
+</div>
+<div
+  *ngIf="(breakPointService.isMobile$ | async) === (undefined || null)"
+  class="desktop-view-container"
+>
+  <div class="breadcrumb-bar">
+    <div class="back">
+      <img class="back-arrow" src="/assets/icons/back_arrow.svg" alt="" />
+      <span class="results-label" (click)="onBackClick()">Rezultate</span>
+    </div>
+  </div>
+
+  <div *ngIf="supplierData?.about" class="page-title-container">
+    <div class="title-header">
+      <h1 class="title-label"> {{ supplierData?.about?.title }}</h1>
+      <!-- <span class="premium-label">PREMIUM</span><span>
+        <img src="/assets/icons/star_icon.svg" alt=""></span><span>N/A
+        5.0</span><span>N/A 365 Evaluari</span> -->
+    </div>
+    <div class="social-media-icons">
+      <span class="social-media"
+        ><img src="/assets/icons/facebook_icon.svg" alt="" class="social-media-icon"
+      /></span>
+      <span class="social-media"
+        ><img src="/assets/icons/instagram_icon.svg" alt="" class="social-media-icon"
+      /></span>
+      <span class="social-media"
+        ><img src="/assets/icons/pinterest_icon.svg" alt="" class="social-media-icon"
+      /></span>
+    </div>
+  </div>
+
+  <div *ngIf="supplierData?.Facility" class="supplier-details-container-d">
+    <div class="details-side">
+      <span class="details-label"
+        >{{ supplierData?.about?.county }},{{ supplierData?.about?.city }}</span
+      ><span class="details-label"
+        >{{ supplierData?.Facility?.CapacitateRange?.minCap }} -
+        {{ supplierData?.Facility?.CapacitateRange?.maxCap }} Persoane </span
+      ><span class="details-label">Vezi pe harta</span><a class="details-label">Website</a
+      ><span class="details-label">Numar de telefon</span>
+    </div>
+    <div class="save-side">
+      <span class="supplier-heart-icon"
+        ><img src="/assets/icons/favorite_save_icon.svg" [style.fill]="'black'" alt=""
+      /></span>
+      <span class="supplier-save-label">Salveaza</span>
+    </div>
+  </div>
+
+  <div class="supplier-navbar">
+    <span class="about-label" (click)="scrollToSection('despreNoi')">Despre noi</span
+    ><span class="about-label">Disponibilitate</span><span class="about-label">Catalog</span
+    ><span class="about-label" (click)="scrollToSection('faq')">FaQ</span
+    ><span class="about-label" (click)="scrollToSection('offers')">Oferte</span
+    ><span class="about-label" (click)="scrollToSection('contact')">Contact</span>
+  </div>
+
+  <div class="supplier-page-content-d">
+    <div class="left-side">
+      <div *ngIf="images" class="image-container-d">
+        <img (click)="openGallery()" class="image-item" [src]="mainImageSrc" alt="Supplier image" />
+        <div class="thumbnails">
+          <ng-container>
+            <img
+              class="thumbnail"
+              *ngFor="let image of images; index as maineImageIndex"
+              src="{{ image }}"
+              (click)="changeMainImg(image, maineImageIndex)"
+            />
+          </ng-container>
+        </div>
+        <!-- <img class="image-item" *ngFor="let image of images. slice(0, 2)" src="{{image}}" alt="photo"> -->
+      </div>
+
+      <div class="about-supplier-text-wrapper">
+        <div class="title">
+          <h2 id="despreNoi">DESPRE NOI</h2>
+        </div>
+        <div class="about-supplier-text" [innerText]="supplierData?.about?.description"> </div>
+        <div *ngIf="supplierData?.Facility" class="suppl-capacity">
+          <div class="location-details">
+            <span class="suppl-capacity-label">Capacitate</span>
+            <span class="label-2">
+              {{ supplierData?.Facility?.CapacitateRange?.minCap }} -
+              {{ supplierData?.Facility?.CapacitateRange?.maxCap }} Persoane
+            </span>
+          </div>
+
+          <div class="location-details">
+            <span class="suppl-capacity-label">Tip locatie </span>
+            <span class="label-2">N/A Ballrom</span>
+          </div>
+        </div>
+
+        <div *ngIf="facilities?.data" class="about-supplier-text-wrapper">
+          <div class="title">
+            <h2>Facilitati</h2>
+          </div>
+          <div class="about-supplier-text-wrapper-content">
+            <ng-container *ngFor="let facility of facilities?.data">
+              <div class="supplier-facility-box">
+                <img
+                  class="supplier-facility-box-icon"
+                  *ngIf="facility.icon"
+                  src="/assets/icons/supplier_page_facilities/{{ facility?.icon }}.svg"
+                  alt="{{ facility.icon }}"
+                />
+                <div class="supplier-facility-box-label">{{ facility.label }}</div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="faqPreview?.length" class="supplier-page-content-faq">
+        <div
+          id="faq"
+          [ngClass]="[
+            showAll ? 'supplier-page-content-faq-show-less' : 'supplier-page-content-faq-show-more'
+          ]"
+        >
+          <h1 class="supplier-page-content-faq-title">CELE MAI FRECVENTE INTREBARI</h1>
+          <ng-container *ngFor="let question of faqPreview">
+            <div class="supplier-page-content-faq-question" *ngIf="question.title">
+              {{ question.title }}
+            </div>
+            <div *ngFor="let answer of question?.data">
+              <ng-container [ngSwitch]="answer.type">
+                <div *ngSwitchCase="'number'">
+                  <div class="supplier-page-content-faq-question">
+                    {{ answer.label }}
+                  </div>
+                  <div class="supplier-page-content-faq-answear">
+                    {{ answer.value }}
+                  </div>
+                </div>
+                <div *ngSwitchCase="'switch'" class="supplier-page-content-faq-answear-check-mark">
+                  <span id="tick-mark"></span
+                  ><span class="supplier-page-content-faq-answear">{{ answer.label }}</span>
+                </div>
+                <div *ngSwitchCase="'yes-no'" class="supplier-page-content-faq-answear">
+                  {{ answer.value ? "DA" : "NU" }}
+                </div>
+              </ng-container>
+            </div>
+          </ng-container>
+        </div>
+        <div
+          *ngIf="faqPreview?.length"
+          class="button-desktop"
+          mat-button
+          (click)="showAllContent()"
+        >
+          <span *ngIf="showAll"> Vezi mai putin</span
+          ><span *ngIf="!showAll"> Vezi toate subiectele ...</span>
+        </div>
+      </div>
+
+      <ng-container *ngIf="supplierData?.promotions">
+        <div id="offers" class="offers-title">
+          <h2>OFERTE</h2>
+        </div>
+
+        <div class="offer-wrapper-parent">
+          <div *ngFor="let offer of supplierData?.promotions" class="offer-wrapper">
+            <div class="offer-top">
+              <img class="offer-image-background" src="{{ offer.photoUrl }}" alt="" />
+              <div class="offers-container-d">
+                <div class="inside-offer-label">
+                  <span class="offer-label-a">Oferta</span
+                  ><span class="expires-in">Expira in {{ offer.endDate | date }}</span>
+                  <div class="offer-bottom-label"> {{ offer.name }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="offer-footer">
+              <div class="buttons-wrapper"
+                ><button (click)="goToOffer()" class="gallery-button">Obtine oferta</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="right-side">
+      <section>
+        <ng-container *ngIf="supplierData?.about" class="supplier-page-content-calendar">
+          <app-calendar [dataFromDesktop]="supplierData"></app-calendar>
+        </ng-container>
+      </section>
+
+      <section>
+        <ng-container>
+          <app-offer-request
+            *ngIf="supplierDataToSendOffer"
+            [dataFromDesktop]="supplierDataToSendOffer"
+          ></app-offer-request>
+        </ng-container>
+      </section>
+
+      <section>
+        <ng-container *ngIf="supplierData?.about?.contact?.phone">
+          <div id="contact" class="contact-supplier-d">
+            <h1 class="contact-title"> Contact {{ supplierData?.about?.title }}</h1>
+            <span class="hidden-number" (click)="showPhoneNumber()" *ngIf="!showNumber">
+              Vezi numar de telefon
+            </span>
+            <span class="hidden-number number" *ngIf="showNumber">{{
+              supplierData?.about?.contact?.phone
+            }}</span>
+          </div>
+        </ng-container>
+      </section>
+
+      <section>
+        <div *ngIf="supplierData?.about" class="supplier-page-content-localisation">
+          <div class="supplier-page-content-localisation-container">
+            <div class="supplier-page-content-localisation-container-title"> Localizare </div>
+            <div class="location-name-container">
+              <img
+                class="location-icon"
+                src="/assets/icons/location_pin_icon.svg"
+                alt="pin locatie"
+              />
+              <div>
+                <div class="location-name">{{ supplierData?.about?.city }}</div>
+                <div class="county-name">{{ supplierData?.about?.county }}</div>
+              </div>
+            </div>
+            <!-- Google Maps for desktop form -->
+            <div #googleMapDesktop class="map">Harta</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="breakPointService.isMobile$ | async" class="supplier-page-container">
+  <div class="top-image">
+    <div *ngIf="imagesReady" class="image">
+      <!-- TODO: de inlocuit cu altceva  -->
+      <!-- <ngx-image-swiper [config]="swiperConfig" [images]="images"></ngx-image-swiper> -->
+    </div>
+    <div class="image-controls">
+      <div class="control-button" href="/" (click)="onBackClick()">
+        <img src=" /assets/icons/arrow-left.svg" alt="" />
+      </div>
+      <div class="share-fav">
+        <!-- TODO: Implementation? -->
+        <!-- <div class="control-button" (click)="share()"> -->
+        <div class="control-button">
+          <img src="/assets/icons/share_icon.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <span *ngIf="images?.length" class="page-counter">{{ images.length }} images</span>
+  </div>
+
+  <div class="supplier-page-content">
+    <h1 class="supplier-page-content-title" *ngIf="supplierData">
+      {{ supplierData.about.title }}
+    </h1>
+    <div *ngIf="supplierData?.about" class="supplier-page-content-supplier-details">
+      <div class="supplier-page-content-supplier-details-feedback">
+        <!-- 
+        <span><img src="/assets/icons/star_rating_icon.svg" alt="" /></span><span>N/A</span>
+        <span><img src="/assets/icons/black_dot_icon.svg" alt="" /></span><span class="underline">N/A
+          recenzii</span><span><img src="/assets/icons/black_dot_icon.svg" alt="" /></span> -->
+
+        <span class="underline">{{ supplierData?.about?.city }}</span>
+      </div>
+      <div
+        class="supplier-page-content-supplier-details-capacity"
+        *ngIf="supplierData?.Facility?.CapacitateRange"
+      >
+        <span>
+          De la {{ supplierData?.Facility?.CapacitateRange?.minCap }} -
+          {{ supplierData?.Facility?.CapacitateRange?.maxCap }} persoane
+        </span>
+        <span> <img src="/assets/icons/black_dot_icon.svg" alt="" /></span
+        ><a class="underline" href="{{ supplierData?.companyDetails?.address }}">Website</a>
+      </div>
+    </div>
+    <div class="supplier-page-content-about">
+      <h1 class="supplier-page-content-about-title">Despre</h1>
+      <!-- <div class="supplier-page-content-about-description">
+        {{supplierData?.about?.description}} </div> -->
+
+      <app-show-more-less [wordLimit]="250" [text]="supplierDescription"></app-show-more-less>
+    </div>
+
+    <!-- <div class="supplier-page-content-promotions">
+      <div class="supplier-page-content-promotions-title">Promotii</div>
+      <img class="supplier-page-content-promotions-image" [src]="promotionBackgroundImage" alt="">
+      <div>
+        <div class="supplier-page-content-promotions-content">
+          <div class="supplier-page-content-promotions-content-top">
+            N/A pana la 25 Decembrie 2029
+          </div>
+          <div class="supplier-page-content-promotions-content-bottom">
+            N/A Ai 10% Discount la toate evenimentele din luna Mai 2023.
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div *ngIf="facilities?.data" class="supplier-page-content-facilities">
+      <h1 class="supplier-page-content-facilities-title">Facilitati</h1>
+      <div class="supplier-page-content-facilities-content">
+        <ng-container *ngFor="let facility of facilities?.data">
+          <div class="supplier-facility-box">
+            <img
+              class="supplier-facility-box-icon"
+              *ngIf="facility.icon"
+              src="/assets/icons/supplier_page_facilities/{{ facility?.icon }}.svg"
+              alt="{{ facility.icon }}"
+            />
+            <div class="supplier-facility-box-label">{{ facility.label }}</div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div
+      *ngIf="faqPreview?.length"
+      class="supplier-page-content-faq"
+      [ngClass]="{ 'supplier-page-content-faq-show-more': !showAll }"
+      [style.height]="showAll ? '100%' : '368px'"
+    >
+      <h1 class="supplier-page-content-faq-title">Intrebari frecvente</h1>
+      <ng-container *ngFor="let question of faqPreview">
+        <div class="supplier-page-content-faq-question" *ngIf="question.title">
+          {{ question.title }}
+        </div>
+        <div *ngFor="let answer of question?.data">
+          <ng-container [ngSwitch]="answer.type">
+            <div *ngSwitchCase="'number'">
+              <div class="supplier-page-content-faq-question">
+                {{ answer.label }}
+              </div>
+              <div class="supplier-page-content-faq-answear">
+                {{ answer.value }}
+              </div>
+            </div>
+            <div *ngSwitchCase="'switch'" class="supplier-page-content-faq-answear-check-mark">
+              <span id="tick-mark"></span
+              ><span class="supplier-page-content-faq-answear">{{ answer.label }}</span>
+            </div>
+            <div *ngSwitchCase="'yes-no'" class="supplier-page-content-faq-answear">
+              {{ answer.value ? "DA" : "NU" }}
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+
+    <div *ngIf="faqPreview?.length" class="button" mat-button (click)="showAllContent()">
+      <span *ngIf="showAll"> Vezi mai putin</span><span *ngIf="!showAll"> Vezi mai multe</span>
+    </div>
+
+    <div class="supplier-page-content-opinion">
+      <div class="opinion-question-container">
+        <div class="question">Ce parere ti-ai facut?</div>
+        <div class="leave-message" (click)="sendMessage()">Trimite un mesaj locatiei</div>
+      </div>
+      <img class="image" src="/assets/images/tineri_indragostiti.jpg" alt="" />
+    </div>
+
+    <div class="supplier-page-content-localisation">
+      <h1 class="supplier-page-content-localisation-title"> Localizare pe harta </h1>
+      <div class="supplier-page-content-localisation-container">
+        <div class="supplier-page-content-localisation-container-title"> Localizare </div>
+        <div class="location-name-container">
+          <img class="location-icon" src="/assets/icons/location_pin_icon.svg" alt="pin locatie" />
+          <div *ngIf="supplierData?.about?.county">
+            <div class="location-name">{{ supplierData?.about?.city }}</div>
+            <div class="county-name">{{ supplierData?.about?.county }}</div>
+          </div>
+        </div>
+        <!-- GoogleMaps for mobile form -->
+        <div #googleMapMobile class="map">Harta</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bottom-supplier-navbar" class="bottom-navigation">
+    <app-bottom-navigation
+      (askAnOffer)="askOffer()"
+      (checkTheCalendar)="checkCalendar()"
+      [phone]="supplierData?.about?.contact?.phone"
+      [displayCalendar]="supplierData?.about?.displayCalendar || false"
+    ></app-bottom-navigation>
+  </div>
+</div>
+
+<div class="adminMode" *ngIf="adminMode">
+  <h1>Publică pagina?</h1>
+  <div class="aprove" (click)="publishPage('published')">
+    <h1>Aproba</h1>
+  </div>
+  <div class="reject" (click)="openModalRejectPublish()">
+    <h1>Respinge</h1>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+@import "/src/sass/variables";
+
+:host {
+  display: block;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  height: 154px;
+  border-radius: 16px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 16px 0;
+
+  &:first-of-type {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+  }
+
+  &:last-of-type {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background: linear-gradient(107.65deg, $secondary-color -56.27%, $primary-color 84.08%);
+  }
+}
+
+.mat-icon {
+  transform: scale(1.5);
+
+  ::ng-deep {
+    path {
+      fill: $white;
+    }
+  }
+}
+
+.title {
+  font-weight: bold;
+  color: $white;
+  margin: 0;
+
+  &:last-of-type {
+    margin-top: 0;
+  }
+}
+
+.subtitle {
+  font-size: 14px;
+  color: $white;
+  margin-bottom: 0;
+}
+
+.button {
+  text-align: center;
+  background-color: $white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 10px;
+
+  span {
+    font-family: "Sf Pro Display", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background: -webkit-linear-gradient(107.65deg, $secondary-color -56.27%, $primary-color 84.08%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .title,
+  .subtitle {
+    font-size: 20px;
+  }
+}

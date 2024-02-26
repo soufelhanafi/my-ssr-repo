@@ -1,0 +1,8 @@
+<div class="main">
+  <div *ngIf="supplierList.length === 0"> Ups! Nu s-au gasit date. </div>
+  <app-supplier
+    *ngFor="let supplier of supplierList"
+    [supplierDetails]="supplier"
+    (click)="goToSupplier(supplier)"
+  ></app-supplier>
+</div>

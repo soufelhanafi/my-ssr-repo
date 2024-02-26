@@ -1,0 +1,84 @@
+@import "src/sass/styles";
+
+.close-icon {
+  width: 32px;
+  height: 32px;
+  color: black;
+  background: white;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 16px;
+  position: absolute;
+  top: 16px;
+  left: 24px;
+}
+
+.icon-field-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e5e5ea;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.location-suggestions {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-dialog {
+  overflow-x: hidden;
+  height: 100%;
+
+  &__header {
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    .heading-3 {
+      align-self: center;
+      width: 80%;
+      text-align: center;
+      height: 55px;
+      padding: 15px;
+      font-weight: 700 !important;
+    }
+  }
+
+  &__section {
+    margin: 24px 0;
+
+    @include media-breakpoint-up(md) {
+      .heading-2 {
+        @include heading-4;
+      }
+    }
+  }
+
+  &__form {
+    margin-top: 75px;
+    margin-bottom: 100px;
+    height: calc(100% - 175px);
+    // overflow-y: scroll;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.small {
+  opacity: 60%;
+  align-self: center;
+}
+
+.bottom-buttons {
+  background-color: white;
+  z-index: 1;
+}

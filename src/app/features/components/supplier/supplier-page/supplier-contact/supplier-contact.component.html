@@ -1,0 +1,48 @@
+<section [ngClass]="isMobile ? 'mobile' : APP_SETTINGS.EMPTY_LINE">
+  <h3 class="mrg-bot-25">Contact</h3>
+  <section class="mrg-bot-25">
+    <h5>Persoană de contact</h5>
+    <div class="contact-container">
+      <div *ngFor="let contact of contacts" class="contact-box">
+        <div class="contact-row">
+          <p class="flex name">
+            <mat-icon svgIcon="user" class="icon"></mat-icon>
+            <span>{{ contact?.name }}</span>
+          </p>
+          <p class="flex phone">
+            <mat-icon svgIcon="phone_success" class="icon"></mat-icon>
+            <span>{{ contact?.phone }}</span>
+          </p>
+        </div>
+        <div class="contact-row">
+          <p class="flex email">
+            <mat-icon svgIcon="email" class="icon"></mat-icon>
+            <span>{{ contact?.email }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section *ngIf="supplierData?.about" class="mrg-bot-25">
+    <h5>Localizare</h5>
+    <div class="location-container">
+      <div class="flex-start location-description">
+        <img src="/assets/icons/location_pin_icon.svg" alt="pin locatie" />
+        <p class="mrg-0"
+          >{{ supplierData?.about?.county }}, {{ supplierData?.about?.city }},
+          {{ supplierData?.about?.address }}</p
+        >
+      </div>
+      <div #googleMapDesktop class="map" id="map">Harta</div>
+    </div>
+  </section>
+
+  <section *ngIf="socialLinks.length" class="mrg-bot-25">
+    <h5>Rețele de socializare</h5>
+    <div *ngFor="let social of socialLinks" class="social-container">
+      <img [src]="'assets/icons/' + social.icon" width="24px" height="24px" />
+      <a [href]="social.link">{{ social.name }}</a>
+    </div>
+  </section>
+</section>

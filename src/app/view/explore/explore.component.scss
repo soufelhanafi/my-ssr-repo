@@ -1,0 +1,55 @@
+@import "src/sass/styles";
+
+.search-desktop-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    margin: 48px 0;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 76px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    max-width: 720px;
+    background: linear-gradient(180deg, #ff2c62 0%, #724c9b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    @media (max-width: $max-width-for-mobile) {
+      display: none;
+    }
+  }
+}
+
+.no-results-TEMP {
+  margin: 32px auto;
+}
+
+mat-drawer-content {
+  margin: 0 !important;
+}
+
+.explore-wrapper {
+  position: relative;
+  display: flex;
+
+  .side-filters {
+    margin-left: 50px;
+    overflow-y: auto;
+    width: 300px;
+    min-width: 300px;
+    position: relative;
+  }
+
+  .boxed-width {
+    max-width: 1405px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+}

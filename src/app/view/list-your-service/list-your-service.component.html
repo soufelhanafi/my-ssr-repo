@@ -1,0 +1,8 @@
+<div class="scroll-container">
+  <div class="scroll-wrapper">
+    <div *ngFor="let service of servicesArray; index as index" class="image-container">
+      <img [src]="service?.serviceimageSource" class="image" />
+      <span class="service-label">{{ service?.serviceTitle }}</span>
+    </div>
+  </div>
+</div>

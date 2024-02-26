@@ -1,0 +1,40 @@
+<ng-container *ngIf="activeFigure">
+  <div class="image-preview">
+    <mat-icon
+      *ngIf="!disabledPrevArrow"
+      aria-hidden="false"
+      svgIcon="arrow_left"
+      (click)="onArrowClick('previous')"
+      class="previous-arrow"
+    ></mat-icon>
+
+    <ng-container [ngTemplateOutlet]="activeFigure.isVideo ? video : picture"></ng-container>
+
+    <mat-icon
+      *ngIf="!disabledNextArrow"
+      aria-hidden="false"
+      svgIcon="arrow_right"
+      (click)="onArrowClick('next')"
+      class="next-arrow"
+    ></mat-icon>
+  </div>
+</ng-container>
+
+<ng-template #video>
+  <figure class="video-figure" *ngIf="activeFigure">
+    <iframe
+      class="image iframe"
+      [src]="activeFigure.linkSrc"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </figure>
+</ng-template>
+
+<ng-template #picture>
+  <figure *ngIf="activeFigure">
+    <img class="image" [src]="activeFigure.linkSrc" />
+  </figure>
+</ng-template>

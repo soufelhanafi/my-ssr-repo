@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "title": "Alege data",
+      "imgPath": "/assets/steps/calendar.png"
+    },
+    {
+      "title": "Gaseste o locatie",
+      "imgPath": "/assets/steps/wedding-arch.png"
+    },
+    {
+      "title": "Creaza invitatiile",
+      "imgPath": "/assets/steps/letter.png"
+    },
+    {
+      "title": "Inspira-te din ideile noastre de nunta",
+      "imgPath": "/assets/steps/wedding-photos.png"
+    },
+    {
+      "title": "Fotograf si videograf",
+      "imgPath": "/assets/steps/video-camera.png"
+    }
+  ]
+}

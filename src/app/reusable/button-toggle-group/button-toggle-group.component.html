@@ -1,0 +1,18 @@
+<div class="capacity">
+  <mat-button-toggle-group
+    #inviteesCapacity
+    [multiple]="isMultipleSelection"
+    color="#f2f2f2"
+    class="carousel-container"
+    [formControl]="optionsFormControl"
+  >
+    <mat-button-toggle
+      *ngFor="let option of options"
+      [value]="option.id"
+      [checked]="option.value"
+      [disabled]="isReadOnly"
+      (change)="onValChange($event)"
+      >{{ option.label }}</mat-button-toggle
+    >
+  </mat-button-toggle-group>
+</div>

@@ -1,0 +1,16 @@
+.span {
+  font-family: Calibri, sans-serif;
+}
+
+.privacy-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+}
+
+@media all and (max-width: 1000px) {
+  .privacy-container {
+    margin: 0px auto;
+  }
+}
